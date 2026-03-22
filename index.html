@@ -1,170 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NA Road Trip 2025 — Noah's Route</title>
-  <meta name="description" content="Personal road trip reference: 52 stops, 15,890 miles across North America. Route, permits, and recommendations." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NA Road Trip — Noah's Route</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0a0c0b;--surface:#12151300;--card:#161a16;--card2:#1d211d;
+      --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);
+      --text:#e4e8e0;--text2:#8f9b8c;--text3:#4d5a4b;
+      --green:#6db56d;--green2:#4a8f4a;--green-bg:rgba(109,181,109,0.1);
+      --gold:#c8a84b;--gold-bg:rgba(200,168,75,0.1);
+      --sky:#5b9fd4;--sky-bg:rgba(91,159,212,0.1);
+      --rust:#c46b3d;--rust-bg:rgba(196,107,61,0.1);
+      --purple:#9b7fd4;--purple-bg:rgba(155,127,212,0.1);
+      --r:8px;--r2:12px;
+    }
+    html,body{height:100%;font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);font-size:14px;overflow:hidden}
+
+    /* ── TOP BAR ── */
+    #topbar{
+      display:flex;align-items:center;gap:0;
+      background:#0d100d;border-bottom:1px solid var(--border);
+      height:52px;flex-shrink:0;position:relative;z-index:200;
+    }
+    #brand{display:flex;align-items:center;gap:10px;padding:0 20px;border-right:1px solid var(--border)}
+    #brand-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:var(--green);letter-spacing:-0.02em;white-space:nowrap}
+    #brand-sub{font-size:10px;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase;margin-top:1px}
+
+    /* ── METRIC CARDS ── */
+    #metrics{
+      display:flex;align-items:stretch;flex:1;overflow-x:auto;scrollbar-width:none;
+    }
+    #metrics::-webkit-scrollbar{display:none}
+    .metric{
+      display:flex;flex-direction:column;justify-content:center;
+      padding:0 18px;border-right:1px solid var(--border);
+      min-width:90px;flex-shrink:0;cursor:default;
+    }
+    .metric:hover{background:rgba(255,255,255,0.02)}
+    .metric-val{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--text);line-height:1}
+    .metric-lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px}
+    .metric-val.green{color:var(--green)}
+    .metric-val.gold{color:var(--gold)}
+    .metric-val.sky{color:var(--sky)}
+    .metric-val.rust{color:var(--rust)}
+
+    /* ── NAV TABS ── */
+    #nav{
+      display:flex;align-items:center;gap:2px;padding:0 12px;
+      border-left:1px solid var(--border);flex-shrink:0;
+    }
+    .nav-btn{
+      font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
+      color:var(--text3);background:none;border:none;
+      padding:6px 14px;border-radius:20px;cursor:pointer;
+      transition:all .15s;white-space:nowrap;
+    }
+    .nav-btn:hover{color:var(--text2);background:rgba(255,255,255,0.04)}
+    .nav-btn.active{color:#0a0c0b;background:var(--green)}
+
+    /* ── LAYOUT ── */
+    #app{display:flex;height:calc(100vh - 52px)}
+    .panel{display:none;width:100%;height:100%;overflow:hidden}
+    .panel.active{display:flex}
+
+    /* ── MAP PANEL ── */
+    #map-panel{position:relative}
+    #map{width:100%;height:100%;background:#1a2018}
+    #map-sidebar{
+      position:absolute;top:0;right:0;width:340px;height:100%;
+      background:rgba(10,12,11,0.95);backdrop-filter:blur(12px);
+      border-left:1px solid var(--border);
+      display:flex;flex-direction:column;
+      transform:translateX(100%);transition:transform .3s ease;
+      z-index:100;
+    }
+    #map-sidebar.open{transform:translateX(0)}
+    #sidebar-close{
+      position:absolute;top:12px;right:12px;
+      width:28px;height:28px;border-radius:50%;
+      background:var(--card2);border:1px solid var(--border);
+      color:var(--text2);font-size:16px;cursor:pointer;
+      display:flex;align-items:center;justify-content:center;
+      transition:all .15s;z-index:10;
+    }
+    #sidebar-close:hover{background:var(--border2);color:var(--text)}
+    #sidebar-content{padding:20px;overflow-y:auto;height:100%}
+    .sb-num{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:28px;height:28px;border-radius:50%;font-size:11px;font-weight:600;
+      margin-bottom:10px;flex-shrink:0;
+    }
+    .sb-name{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--text);line-height:1.2;margin-bottom:4px}
+    .sb-state{font-size:11px;color:var(--text3);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.06em}
+    .sb-section{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.09em;color:var(--text3);margin:14px 0 6px}
+    .sb-body{font-size:13px;color:var(--text2);line-height:1.65}
+    .sb-tag{
+      display:inline-block;font-size:10px;font-weight:600;
+      padding:2px 8px;border-radius:8px;margin:2px 3px 2px 0;
+      text-transform:uppercase;letter-spacing:0.05em;
+    }
+    .sb-dist{
+      display:flex;align-items:center;gap:6px;
+      font-size:12px;color:var(--text2);
+      background:var(--card2);border-radius:var(--r);
+      padding:8px 12px;margin-top:8px;
+    }
+    .sb-dist-icon{font-size:14px}
+    .camp-item{
+      padding:10px 12px;background:var(--card2);border-radius:var(--r);
+      margin-bottom:6px;border:1px solid var(--border);
+    }
+    .camp-name{font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px}
+    .camp-detail{font-size:11px;color:var(--text3);line-height:1.5}
+    .permit-alert{
+      background:var(--rust-bg);border:1px solid rgba(196,107,61,0.3);
+      border-radius:var(--r);padding:10px 12px;margin-top:8px;
+    }
+    .permit-alert-title{font-size:11px;font-weight:600;color:var(--rust);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px}
+    .permit-alert-body{font-size:12px;color:var(--text2);line-height:1.5}
+
+    /* map legend */
+    #map-legend{
+      position:absolute;bottom:20px;left:20px;
+      background:rgba(10,12,11,0.9);backdrop-filter:blur(8px);
+      border:1px solid var(--border);border-radius:var(--r2);
+      padding:12px 14px;z-index:50;
+    }
+    .legend-title{font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px}
+    .legend-item{display:flex;align-items:center;gap:7px;margin-bottom:5px;font-size:11px;color:var(--text2)}
+    .legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+    #stop-counter{
+      position:absolute;top:16px;left:16px;
+      background:rgba(10,12,11,0.9);backdrop-filter:blur(8px);
+      border:1px solid var(--border);border-radius:20px;
+      padding:6px 14px;font-size:12px;color:var(--text2);
+      z-index:50;
+    }
+
+    /* ── SCROLL PANELS ── */
+    .scroll-panel{flex-direction:column;overflow:hidden}
+    .scroll-panel-inner{flex:1;overflow-y:auto;padding:20px 24px 40px}
+    .scroll-panel-inner::-webkit-scrollbar{width:4px}
+    .scroll-panel-inner::-webkit-scrollbar-track{background:transparent}
+    .scroll-panel-inner::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+
+    /* ── PERMITS TAB ── */
+    .permits-header{
+      padding:20px 24px 0;flex-shrink:0;
+      border-bottom:1px solid var(--border);background:#0d100d;
+    }
+    .permits-header h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--text);margin-bottom:4px}
+    .permits-header p{font-size:13px;color:var(--text2);padding-bottom:16px;line-height:1.6}
+    .perm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:12px}
+
+    .perm-card{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:var(--r2);overflow:hidden;
+    }
+    .perm-card-header{
+      padding:14px 16px;cursor:pointer;
+      display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+      transition:background .15s;
+    }
+    .perm-card-header:hover{background:var(--card2)}
+    .perm-card-title{font-size:14px;font-weight:600;color:var(--text);flex:1;line-height:1.4}
+    .perm-card-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0}
+    .diff-pill{font-size:10px;font-weight:700;padding:3px 9px;border-radius:10px;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap}
+    .diff-extreme{background:var(--rust-bg);color:var(--rust);border:1px solid rgba(196,107,61,0.3)}
+    .diff-hard{background:var(--gold-bg);color:var(--gold);border:1px solid rgba(200,168,75,0.3)}
+    .diff-moderate{background:var(--green-bg);color:var(--green);border:1px solid rgba(109,181,109,0.3)}
+    .perm-chev{color:var(--text3);font-size:14px;transition:transform .2s;margin-top:2px}
+    .perm-chev.open{transform:rotate(90deg)}
+    .perm-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border);background:rgba(0,0,0,0.15)}
+    .perm-body.open{display:block}
+    .perm-row{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .perm-row:last-child{border-bottom:none}
+    .perm-label{font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;min-width:80px;padding-top:2px;flex-shrink:0}
+    .perm-val{font-size:12px;color:var(--text2);line-height:1.6;flex:1}
+    .perm-val a{color:var(--sky)}
+    .perm-val a:hover{text-decoration:underline}
+    .season-pill{display:inline-block;font-size:10px;padding:2px 7px;border-radius:8px;background:var(--card2);color:var(--text2);border:1px solid var(--border);margin:2px}
+
+    /* ── RECS TAB ── */
+    .recs-header{padding:20px 24px 16px;flex-shrink:0;border-bottom:1px solid var(--border);background:#0d100d}
+    .recs-header h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--text);margin-bottom:4px}
+    .recs-header p{font-size:13px;color:var(--text2);line-height:1.6}
+    .recs-section-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin:20px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+    .recs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px;margin-bottom:6px}
+    .rec-card{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:var(--r2);padding:14px 16px;transition:border-color .15s;
+    }
+    .rec-card:hover{border-color:var(--border2)}
+    .rec-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:6px}
+    .rec-card-name{font-size:14px;font-weight:600;color:var(--text);line-height:1.3}
+    .rec-tag{font-size:10px;font-weight:600;padding:2px 8px;border-radius:8px;background:var(--sky-bg);color:var(--sky);border:1px solid rgba(91,159,212,0.25);white-space:nowrap;flex-shrink:0}
+    .rec-body{font-size:12px;color:var(--text3);line-height:1.65}
+
+    /* ── ROUTE LIST TAB ── */
+    .route-header{padding:20px 24px 0;flex-shrink:0;border-bottom:1px solid var(--border);background:#0d100d}
+    .route-header-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:10px}
+    .route-header h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--text)}
+    .route-filters{display:flex;gap:5px;flex-wrap:wrap;padding-bottom:14px}
+    .rf-btn{font-size:11px;font-weight:500;padding:4px 12px;border-radius:14px;border:1px solid var(--border2);background:transparent;color:var(--text3);cursor:pointer;transition:all .15s}
+    .rf-btn:hover{color:var(--text2)}
+    .rf-btn.on{background:var(--green);color:#0a0c0b;border-color:var(--green)}
+    #route-search{font-size:12px;padding:5px 12px;border-radius:14px;border:1px solid var(--border2);background:var(--card);color:var(--text);outline:none;width:180px}
+    #route-search:focus{border-color:var(--green)}
+    #route-search::placeholder{color:var(--text3)}
+
+    .stop-row{
+      display:flex;gap:12px;padding:12px 14px;
+      border:1px solid var(--border);border-radius:var(--r);
+      background:var(--card);margin-bottom:6px;
+      cursor:pointer;transition:all .15s;align-items:flex-start;
+    }
+    .stop-row:hover{border-color:var(--border2);background:var(--card2)}
+    .stop-badge{
+      width:28px;height:28px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      font-size:10px;font-weight:700;flex-shrink:0;margin-top:1px;
+    }
+    .stop-info{flex:1;min-width:0}
+    .stop-name{font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px}
+    .stop-sub{font-size:11px;color:var(--text3);line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .stop-meta{display:flex;align-items:center;gap:6px;margin-top:5px;flex-wrap:wrap}
+    .type-tag{font-size:9px;font-weight:700;padding:2px 6px;border-radius:6px;text-transform:uppercase;letter-spacing:0.06em}
+    .tag-np{background:rgba(109,181,109,0.15);color:var(--green)}
+    .tag-city{background:rgba(91,159,212,0.15);color:var(--sky)}
+    .tag-climb{background:rgba(200,168,75,0.15);color:var(--gold)}
+    .dist-chip{font-size:10px;color:var(--text3);background:rgba(255,255,255,0.04);padding:1px 7px;border-radius:6px}
+    .route-arrow{text-align:center;color:var(--text3);opacity:0.3;font-size:11px;height:8px;margin:-1px 0}
+
+    /* ── CANVAS MAP ── */
+    #map-canvas{width:100%;height:100%;cursor:default}
+
+    /* tooltip */
+    #map-tooltip{
+      position:absolute;pointer-events:none;
+      background:rgba(10,12,11,0.95);border:1px solid var(--border2);
+      border-radius:var(--r);padding:8px 12px;font-size:12px;color:var(--text);
+      max-width:200px;z-index:200;display:none;backdrop-filter:blur(8px);
+      line-height:1.4;
+    }
+    #map-tooltip .tt-num{font-size:10px;color:var(--text3)}
+    #map-tooltip .tt-name{font-weight:600;font-size:13px}
+
+    /* ── UTIL ── */
+    .hidden{display:none!important}
+  </style>
 </head>
 <body>
 
-  <!-- ── HEADER ───────────────────────────────────────── -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="header-brand">
-        <span class="brand-flag">🗺</span>
-        <div>
-          <h1 class="brand-title">NA Road Trip</h1>
-          <p class="brand-sub">Noah's personal reference · 2025–2026</p>
-        </div>
+<!-- TOP BAR -->
+<div id="topbar">
+  <div id="brand">
+    <div>
+      <div id="brand-title">🗺 NA ROAD TRIP</div>
+      <div id="brand-sub">Noah's reference · 2025–26</div>
+    </div>
+  </div>
+  <div id="metrics">
+    <div class="metric"><div class="metric-val green">15,890</div><div class="metric-lbl">Total Miles</div></div>
+    <div class="metric"><div class="metric-val">68</div><div class="metric-lbl">Stops</div></div>
+    <div class="metric"><div class="metric-val green">22</div><div class="metric-lbl">Nat'l Parks</div></div>
+    <div class="metric"><div class="metric-val rust">9</div><div class="metric-lbl">Permits Req'd</div></div>
+    <div class="metric"><div class="metric-val sky">~295</div><div class="metric-lbl">Drive Hours</div></div>
+    <div class="metric"><div class="metric-val gold">90–120</div><div class="metric-lbl">Rec. Days</div></div>
+    <div class="metric"><div class="metric-val">3</div><div class="metric-lbl">Countries</div></div>
+  </div>
+  <nav id="nav">
+    <button class="nav-btn active" data-panel="map-panel">🗺 Map</button>
+    <button class="nav-btn" data-panel="route-panel">📍 Route</button>
+    <button class="nav-btn" data-panel="permits-panel">📋 Permits</button>
+    <button class="nav-btn" data-panel="recs-panel">⭐ Recs</button>
+  </nav>
+</div>
+
+<!-- APP -->
+<div id="app">
+
+  <!-- MAP -->
+  <div id="map-panel" class="panel active">
+    <canvas id="map-canvas"></canvas>
+    <div id="stop-counter">Click any stop for details</div>
+    <div id="map-legend">
+      <div class="legend-title">Stop Type</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#6db56d"></div>National Park</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#5b9fd4"></div>City / Town</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#c8a84b"></div>Climb / Summit</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#c46b3d"></div>Permit Required</div>
+    </div>
+    <div id="map-sidebar">
+      <button id="sidebar-close">✕</button>
+      <div id="sidebar-content"></div>
+    </div>
+    <div id="map-tooltip"></div>
+  </div>
+
+  <!-- ROUTE LIST -->
+  <div id="route-panel" class="panel scroll-panel">
+    <div class="route-header">
+      <div class="route-header-top">
+        <h2>Full Route</h2>
+        <input type="search" id="route-search" placeholder="Search stops…"/>
       </div>
-      <div class="header-stats">
-        <div class="hstat"><span class="hstat-val">15,890</span><span class="hstat-lbl">miles</span></div>
-        <div class="hstat-div"></div>
-        <div class="hstat"><span class="hstat-val">52</span><span class="hstat-lbl">stops</span></div>
-        <div class="hstat-div"></div>
-        <div class="hstat"><span class="hstat-val">22</span><span class="hstat-lbl">nat'l parks</span></div>
-        <div class="hstat-div"></div>
-        <div class="hstat"><span class="hstat-val">8</span><span class="hstat-lbl">permits</span></div>
+      <div class="route-filters">
+        <button class="rf-btn on" data-f="all">All</button>
+        <button class="rf-btn" data-f="np">National Parks</button>
+        <button class="rf-btn" data-f="city">Cities</button>
+        <button class="rf-btn" data-f="climb">Climbs</button>
+        <button class="rf-btn" data-f="canada">Canada 🇨🇦</button>
+        <button class="rf-btn" data-f="permit">Has Permit</button>
       </div>
     </div>
-  </header>
+    <div class="scroll-panel-inner"><div id="route-list"></div></div>
+  </div>
 
-  <!-- ── NAV ──────────────────────────────────────────── -->
-  <nav class="tab-nav">
-    <button class="tab-btn active" data-tab="overview">Overview</button>
-    <button class="tab-btn" data-tab="route">Route</button>
-    <button class="tab-btn" data-tab="permits">Permits</button>
-    <button class="tab-btn" data-tab="recs">Recommendations</button>
-  </nav>
+  <!-- PERMITS -->
+  <div id="permits-panel" class="panel scroll-panel">
+    <div class="permits-header">
+      <h2>Permits & Lotteries</h2>
+      <p>All required permits for activities on this trip. Expand each for lottery links, timing, costs, and key tips.</p>
+    </div>
+    <div class="scroll-panel-inner"><div class="perm-grid" id="perm-grid"></div></div>
+  </div>
 
-  <!-- ── MAIN ─────────────────────────────────────────── -->
-  <main class="content">
+  <!-- RECS -->
+  <div id="recs-panel" class="panel scroll-panel">
+    <div class="recs-header">
+      <h2>Recommendations</h2>
+      <p>Additional stops not in the original plan — mostly on or near the existing route.</p>
+    </div>
+    <div class="scroll-panel-inner" id="recs-inner"></div>
+  </div>
 
-    <!-- OVERVIEW ---------------------------------------- -->
-    <section id="tab-overview" class="tab-panel active">
-      <div class="overview-grid">
+</div>
 
-        <div class="stat-block">
-          <div class="stat-n">15,890</div>
-          <div class="stat-label">Total miles (optimized)</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-n">~295</div>
-          <div class="stat-label">Hours behind the wheel</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-n">52</div>
-          <div class="stat-label">Stops across 3 countries</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-n">90–120</div>
-          <div class="stat-label">Recommended days</div>
-        </div>
-
-        <div class="callout callout--info span-full">
-          <h3 class="callout-title">Biggest route optimization: The Southwest Loop</h3>
-          <p>Original route: Zion → Bryce → SLC → Bonneville → Canyonlands → Arches → Grand Junction → Aspen → <em>then back</em> to Grand Canyon and Monument Valley. That's two major direction reversals.<br><br>
-          Optimized: Las Vegas → Havasu Falls → Grand Canyon → Sedona → Monument Valley → Four Corners → Mesa Verde → Antelope Canyon → Zion → Bryce → Capitol Reef → Canyonlands → Arches → Aspen → Denver. Saves ~400 miles and hours of wasted driving.</p>
-        </div>
-
-        <div class="callout callout--warning span-full">
-          <h3 class="callout-title">Why the mileage is higher than your spreadsheet (14,645 mi)</h3>
-          <p>The spreadsheet total skipped some legs and had route inefficiencies that, when corrected, add back miles on net. The optimized route also adds recommended stops (Lassen Volcanic, Valley of Fire, Columbia River Gorge, Peyto Lake). The result is more total miles but significantly fewer wasted driving hours — and a much more logical geographic flow.</p>
-        </div>
-
-        <div class="callout callout--green span-full">
-          <h3 class="callout-title">Ideal timing: Late May → September (East to West to Southwest)</h3>
-          <p>Start in Maine (Acadia) in late May when the Precipice Trail reopens and lobster season peaks. Hit Glacier NP by early July before peak crowds. Reach the Southwest by September for cooler temps and far better permit odds. Wrap the East Coast loop in October with Appalachian fall foliage. Avoid Death Valley June–August (110°F+) and Crater Lake's rim before July (snow-covered).</p>
-        </div>
-
-        <div class="phase-strip">
-          <div class="phase" style="--ph-color:#4A90C4">
-            <div class="phase-label">Phase 1</div>
-            <div class="phase-name">New England + Canada East</div>
-            <div class="phase-stops">Acadia → Mt. Washington → Adirondacks → Toronto → Chicago</div>
-          </div>
-          <div class="phase" style="--ph-color:#7CAE6E">
-            <div class="phase-label">Phase 2</div>
-            <div class="phase-name">Northern Rockies + Canada West</div>
-            <div class="phase-stops">Badlands → Yellowstone → Glacier → Banff → Vancouver</div>
-          </div>
-          <div class="phase" style="--ph-color:#C4884A">
-            <div class="phase-label">Phase 3</div>
-            <div class="phase-name">Pacific Coast</div>
-            <div class="phase-stops">Olympic → Seattle → Rainier → Cascades → St. Helens → Oregon Coast → Crater Lake</div>
-          </div>
-          <div class="phase" style="--ph-color:#C45A5A">
-            <div class="phase-label">Phase 4</div>
-            <div class="phase-name">California</div>
-            <div class="phase-stops">Lake Tahoe → Mendocino → SF → Yosemite → Sequoia → Death Valley</div>
-          </div>
-          <div class="phase" style="--ph-color:#A67CC4">
-            <div class="phase-label">Phase 5</div>
-            <div class="phase-name">Southwest</div>
-            <div class="phase-stops">Las Vegas → Havasu Falls → Grand Canyon → Zion → Bryce → Utah Parks → Colorado</div>
-          </div>
-          <div class="phase" style="--ph-color:#C4B44A">
-            <div class="phase-label">Phase 6</div>
-            <div class="phase-name">Home Stretch</div>
-            <div class="phase-stops">Denver → KC → Louisville → Appalachia → Virginia → Home</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ROUTE ------------------------------------------- -->
-    <section id="tab-route" class="tab-panel">
-      <div class="route-controls">
-        <div class="filter-row">
-          <span class="filter-label">Filter:</span>
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="np">National Parks</button>
-          <button class="filter-btn" data-filter="city">Cities</button>
-          <button class="filter-btn" data-filter="climb">Climbs</button>
-          <button class="filter-btn" data-filter="canada">Canada 🇨🇦</button>
-        </div>
-        <div class="search-wrap">
-          <input type="search" id="stop-search" placeholder="Search stops…" class="stop-search" />
-        </div>
-      </div>
-      <div id="route-list" class="route-list"></div>
-    </section>
-
-    <!-- PERMITS ----------------------------------------- -->
-    <section id="tab-permits" class="tab-panel">
-      <p class="section-intro">All permits required for activities in the spreadsheet or recommended additions. Click to expand full details, lottery links, timing, and costs.</p>
-      <div class="permit-legend">
-        <span class="diff-badge diff--extreme">Extreme competition</span>
-        <span class="diff-badge diff--hard">Very competitive</span>
-        <span class="diff-badge diff--moderate">Moderate</span>
-      </div>
-      <div id="permits-list" class="permits-list"></div>
-    </section>
-
-    <!-- RECOMMENDATIONS --------------------------------- -->
-    <section id="tab-recs" class="tab-panel">
-      <p class="section-intro">Locations <em>not</em> in your spreadsheet — ranked by how much they'd elevate the trip. Most are on or very near your existing route.</p>
-
-      <h2 class="recs-heading">Must-add (high priority)</h2>
-      <div class="recs-grid" id="recs-high"></div>
-
-      <h2 class="recs-heading">Worth the slight detour</h2>
-      <div class="recs-grid" id="recs-med"></div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <p>Personal reference only · Built with ☕ · <a href="https://github.com/noahwxlr/na-roadtrip" target="_blank">Open source on GitHub</a></p>
-  </footer>
-
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
