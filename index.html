@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NA Road Trip 2025 — Noah's Route</title>
+  <meta name="description" content="Personal road trip reference: 52 stops, 15,890 miles across North America. Route, permits, and recommendations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── HEADER ───────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="brand-flag">🗺</span>
+        <div>
+          <h1 class="brand-title">NA Road Trip</h1>
+          <p class="brand-sub">Noah's personal reference · 2025–2026</p>
+        </div>
+      </div>
+      <div class="header-stats">
+        <div class="hstat"><span class="hstat-val">15,890</span><span class="hstat-lbl">miles</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-val">52</span><span class="hstat-lbl">stops</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-val">22</span><span class="hstat-lbl">nat'l parks</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-val">8</span><span class="hstat-lbl">permits</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── NAV ──────────────────────────────────────────── -->
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="overview">Overview</button>
+    <button class="tab-btn" data-tab="route">Route</button>
+    <button class="tab-btn" data-tab="permits">Permits</button>
+    <button class="tab-btn" data-tab="recs">Recommendations</button>
+  </nav>
+
+  <!-- ── MAIN ─────────────────────────────────────────── -->
+  <main class="content">
+
+    <!-- OVERVIEW ---------------------------------------- -->
+    <section id="tab-overview" class="tab-panel active">
+      <div class="overview-grid">
+
+        <div class="stat-block">
+          <div class="stat-n">15,890</div>
+          <div class="stat-label">Total miles (optimized)</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-n">~295</div>
+          <div class="stat-label">Hours behind the wheel</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-n">52</div>
+          <div class="stat-label">Stops across 3 countries</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-n">90–120</div>
+          <div class="stat-label">Recommended days</div>
+        </div>
+
+        <div class="callout callout--info span-full">
+          <h3 class="callout-title">Biggest route optimization: The Southwest Loop</h3>
+          <p>Original route: Zion → Bryce → SLC → Bonneville → Canyonlands → Arches → Grand Junction → Aspen → <em>then back</em> to Grand Canyon and Monument Valley. That's two major direction reversals.<br><br>
+          Optimized: Las Vegas → Havasu Falls → Grand Canyon → Sedona → Monument Valley → Four Corners → Mesa Verde → Antelope Canyon → Zion → Bryce → Capitol Reef → Canyonlands → Arches → Aspen → Denver. Saves ~400 miles and hours of wasted driving.</p>
+        </div>
+
+        <div class="callout callout--warning span-full">
+          <h3 class="callout-title">Why the mileage is higher than your spreadsheet (14,645 mi)</h3>
+          <p>The spreadsheet total skipped some legs and had route inefficiencies that, when corrected, add back miles on net. The optimized route also adds recommended stops (Lassen Volcanic, Valley of Fire, Columbia River Gorge, Peyto Lake). The result is more total miles but significantly fewer wasted driving hours — and a much more logical geographic flow.</p>
+        </div>
+
+        <div class="callout callout--green span-full">
+          <h3 class="callout-title">Ideal timing: Late May → September (East to West to Southwest)</h3>
+          <p>Start in Maine (Acadia) in late May when the Precipice Trail reopens and lobster season peaks. Hit Glacier NP by early July before peak crowds. Reach the Southwest by September for cooler temps and far better permit odds. Wrap the East Coast loop in October with Appalachian fall foliage. Avoid Death Valley June–August (110°F+) and Crater Lake's rim before July (snow-covered).</p>
+        </div>
+
+        <div class="phase-strip">
+          <div class="phase" style="--ph-color:#4A90C4">
+            <div class="phase-label">Phase 1</div>
+            <div class="phase-name">New England + Canada East</div>
+            <div class="phase-stops">Acadia → Mt. Washington → Adirondacks → Toronto → Chicago</div>
+          </div>
+          <div class="phase" style="--ph-color:#7CAE6E">
+            <div class="phase-label">Phase 2</div>
+            <div class="phase-name">Northern Rockies + Canada West</div>
+            <div class="phase-stops">Badlands → Yellowstone → Glacier → Banff → Vancouver</div>
+          </div>
+          <div class="phase" style="--ph-color:#C4884A">
+            <div class="phase-label">Phase 3</div>
+            <div class="phase-name">Pacific Coast</div>
+            <div class="phase-stops">Olympic → Seattle → Rainier → Cascades → St. Helens → Oregon Coast → Crater Lake</div>
+          </div>
+          <div class="phase" style="--ph-color:#C45A5A">
+            <div class="phase-label">Phase 4</div>
+            <div class="phase-name">California</div>
+            <div class="phase-stops">Lake Tahoe → Mendocino → SF → Yosemite → Sequoia → Death Valley</div>
+          </div>
+          <div class="phase" style="--ph-color:#A67CC4">
+            <div class="phase-label">Phase 5</div>
+            <div class="phase-name">Southwest</div>
+            <div class="phase-stops">Las Vegas → Havasu Falls → Grand Canyon → Zion → Bryce → Utah Parks → Colorado</div>
+          </div>
+          <div class="phase" style="--ph-color:#C4B44A">
+            <div class="phase-label">Phase 6</div>
+            <div class="phase-name">Home Stretch</div>
+            <div class="phase-stops">Denver → KC → Louisville → Appalachia → Virginia → Home</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ROUTE ------------------------------------------- -->
+    <section id="tab-route" class="tab-panel">
+      <div class="route-controls">
+        <div class="filter-row">
+          <span class="filter-label">Filter:</span>
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="np">National Parks</button>
+          <button class="filter-btn" data-filter="city">Cities</button>
+          <button class="filter-btn" data-filter="climb">Climbs</button>
+          <button class="filter-btn" data-filter="canada">Canada 🇨🇦</button>
+        </div>
+        <div class="search-wrap">
+          <input type="search" id="stop-search" placeholder="Search stops…" class="stop-search" />
+        </div>
+      </div>
+      <div id="route-list" class="route-list"></div>
+    </section>
+
+    <!-- PERMITS ----------------------------------------- -->
+    <section id="tab-permits" class="tab-panel">
+      <p class="section-intro">All permits required for activities in the spreadsheet or recommended additions. Click to expand full details, lottery links, timing, and costs.</p>
+      <div class="permit-legend">
+        <span class="diff-badge diff--extreme">Extreme competition</span>
+        <span class="diff-badge diff--hard">Very competitive</span>
+        <span class="diff-badge diff--moderate">Moderate</span>
+      </div>
+      <div id="permits-list" class="permits-list"></div>
+    </section>
+
+    <!-- RECOMMENDATIONS --------------------------------- -->
+    <section id="tab-recs" class="tab-panel">
+      <p class="section-intro">Locations <em>not</em> in your spreadsheet — ranked by how much they'd elevate the trip. Most are on or very near your existing route.</p>
+
+      <h2 class="recs-heading">Must-add (high priority)</h2>
+      <div class="recs-grid" id="recs-high"></div>
+
+      <h2 class="recs-heading">Worth the slight detour</h2>
+      <div class="recs-grid" id="recs-med"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Personal reference only · Built with ☕ · <a href="https://github.com/noahwxlr/na-roadtrip" target="_blank">Open source on GitHub</a></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
