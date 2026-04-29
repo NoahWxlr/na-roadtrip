@@ -149,12 +149,51 @@
     .rec-body{font-size:12px;color:var(--text3);line-height:1.6}
 
     /* ── LEAFLET OVERRIDES ── */
-    .map-tip{background:rgba(10,12,11,0.95)!important;border:1px solid rgba(255,255,255,0.13)!important;border-radius:8px!important;padding:7px 11px!important;font-family:Inter,sans-serif;box-shadow:0 4px 16px rgba(0,0,0,0.5)!important;color:#e4e8e0!important;white-space:nowrap}
-    .map-tip.leaflet-tooltip::before{display:none!important}
-    .leaflet-bar a{background:#161a16!important;color:#e4e8e0!important;border-color:rgba(255,255,255,0.1)!important;line-height:26px!important}
-    .leaflet-bar a:hover{background:#1d211d!important}
-    .leaflet-control-attribution{background:rgba(10,12,11,0.7)!important;color:#4d5a4b!important;font-size:8px!important}
-    .leaflet-control-attribution a{color:#4d5a4b!important}
+    /* Marker popup — interactive (clickable Google Maps link).
+       Contrast on #0a0c0b: #f5f7f3 ≈19.6:1, #c2cdc0 ≈11.2:1, #8fd49a ≈10.4:1 (all AAA) */
+    .map-tip .leaflet-popup-content-wrapper{background:rgba(10,12,11,0.97)!important;border:1px solid rgba(255,255,255,0.22)!important;border-radius:8px!important;box-shadow:0 6px 20px rgba(0,0,0,0.6)!important;color:#f5f7f3!important}
+    .map-tip .leaflet-popup-content{margin:10px 14px!important;font-family:Inter,sans-serif;line-height:1.45;min-width:0}
+    .map-tip .leaflet-popup-tip{background:rgba(10,12,11,0.97)!important;border:1px solid rgba(255,255,255,0.22)!important}
+    .map-tip-num{font-size:12px;font-weight:600;color:#c2cdc0;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:3px}
+    .map-tip-name{font-size:15px;font-weight:700;color:#f5f7f3;margin-bottom:2px}
+    .map-tip-state{font-size:13px;font-weight:500;color:#c2cdc0;margin-bottom:8px}
+    .map-tip-link{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:#8fd49a;text-decoration:underline;text-underline-offset:3px;padding:4px 0;border-radius:4px}
+    .map-tip-link:hover{color:#b3e3bb}
+    .map-tip-link:focus-visible{outline:2px solid #8fd49a;outline-offset:3px;color:#b3e3bb}
+    .leaflet-bar a{background:#161a16!important;color:#f5f7f3!important;border-color:rgba(255,255,255,0.18)!important;line-height:26px!important}
+    .leaflet-bar a:hover,.leaflet-bar a:focus-visible{background:#1d211d!important;outline:2px solid #6db56d!important;outline-offset:1px!important}
+    .leaflet-control-attribution{background:rgba(10,12,11,0.85)!important;color:#a8b3a6!important;font-size:10px!important;padding:2px 6px!important}
+    .leaflet-control-attribution a{color:#bdc7bb!important;text-decoration:underline}
+
+    /* ── ROW LAYOUT / CHIPS ── */
+    .stop-row{display:flex;align-items:flex-start;gap:8px}
+    .stop-info{flex:1;min-width:0}
+
+    .info-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+    .chip{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;padding:2px 7px;border-radius:6px;background:rgba(255,255,255,0.04);color:#bfc7bd;border:1px solid rgba(255,255,255,0.08);line-height:1.5}
+    .chip-elev{background:rgba(91,159,212,0.10);color:#9cc3e3;border-color:rgba(91,159,212,0.22)}
+    .chip-climate{background:rgba(200,168,75,0.10);color:#d8be7c;border-color:rgba(200,168,75,0.22)}
+    .chip-season{background:rgba(196,107,61,0.10);color:#e09a76;border-color:rgba(196,107,61,0.25);max-width:100%}
+    .chip-season .chip-season-text{white-space:normal;line-height:1.45}
+    .sb-chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}
+    .sb-season{font-size:12px;color:#e0a98a;background:rgba(196,107,61,0.10);border:1px solid rgba(196,107,61,0.28);border-radius:7px;padding:8px 11px;margin:8px 0 12px;line-height:1.5}
+    .sb-season-title{font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#c46b3d;margin-bottom:3px}
+
+    /* ── DIRECTIONS LINK ── */
+    .sb-directions{display:flex;align-items:center;gap:8px;margin-top:10px;padding:10px 12px;background:rgba(91,159,212,0.10);border:1px solid rgba(91,159,212,0.28);border-radius:8px}
+    .sb-directions-link{font-size:13px;font-weight:600;color:#9cc3e3;text-decoration:underline;text-underline-offset:3px}
+    .sb-directions-link:hover,.sb-directions-link:focus-visible{color:#bbd6ed}
+    .sb-directions-link:focus-visible{outline:2px solid #9cc3e3;outline-offset:3px;border-radius:3px}
+
+    /* ── PERMIT COUNTDOWN ── */
+    .perm-countdown{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 9px;border-radius:8px;background:rgba(109,181,109,0.10);color:#8fd49a;border:1px solid rgba(109,181,109,0.30);margin-top:6px}
+    .perm-countdown.urgent{background:rgba(196,107,61,0.12);color:#e09a76;border-color:rgba(196,107,61,0.35)}
+    .perm-countdown.past{background:rgba(120,120,120,0.10);color:#a0a8a0;border-color:rgba(120,120,120,0.22)}
+    .perm-countdown.rolling{background:rgba(200,168,75,0.10);color:#d8be7c;border-color:rgba(200,168,75,0.28)}
+    .perm-countdown-num{font-size:13px}
+
+    /* ── PRINT BUTTON ── */
+    #btn-print{cursor:pointer}
 
     /* ── MOBILE ── */
     @media(max-width:640px){
@@ -167,6 +206,27 @@
       #map-legend{bottom:8px;left:8px;padding:8px 10px}
       #stop-counter{top:8px;left:8px;font-size:10px;padding:4px 10px}
     }
+
+    /* ── PRINT ── */
+    @media print{
+      @page{margin:0.5in}
+      body{background:#fff!important;color:#000!important}
+      #topbar,#mob-metrics,#bot-nav,#desktop-nav,#map-panel,#permits-panel,#recs-panel,#map-sidebar,#sidebar-close,#btn-print,.rf-toolbar,.route-arrow{display:none!important}
+      #app{position:static!important;height:auto!important;display:block!important}
+      #route-panel{display:block!important;position:static!important;height:auto!important;overflow:visible!important;background:#fff!important;color:#000!important;padding:0!important}
+      #route-panel::before{content:'NA Road Trip — Trip Plan';display:block;font-family:'Syne',sans-serif;font-weight:800;font-size:24px;color:#000;border-bottom:2px solid #000;padding-bottom:8px;margin-bottom:14px}
+      #route-list{display:block!important;background:#fff!important}
+      .stop-row{display:block!important;page-break-inside:avoid;border:none!important;border-bottom:1px solid #ddd!important;background:#fff!important;padding:10px 0!important;margin:0!important;color:#000!important}
+      .stop-name,.stop-sub,.stop-meta,.dist-chip,.type-tag,.chip{color:#000!important;background:#fff!important;border-color:#999!important}
+      .stop-badge{background:#000!important;color:#fff!important}
+      .print-block{display:block!important;font-size:11px;color:#222;margin-top:6px;line-height:1.45}
+      .print-block strong{color:#000}
+      .print-block ul{margin:4px 0 4px 18px;padding:0}
+      .print-block li{margin:2px 0}
+      a{color:#000!important;text-decoration:underline}
+    }
+    /* hide print-only blocks on screen */
+    .print-block{display:none}
   </style>
 </head>
 <body>
@@ -185,13 +245,14 @@
     <div class="metric"><div class="metric-val rust">9</div><div class="metric-lbl">Permits</div></div>
     <div class="metric"><div class="metric-val sky">~295</div><div class="metric-lbl">Drive Hrs</div></div>
     <div class="metric"><div class="metric-val gold">90–120</div><div class="metric-lbl">Rec. Days</div></div>
-    <div class="metric"><div class="metric-val">3</div><div class="metric-lbl">Countries</div></div>
+    <div class="metric"><div class="metric-val" id="metric-countries" title="Countries visited">2</div><div class="metric-lbl">Countries</div></div>
   </div>
   <nav id="desktop-nav">
     <button class="nav-btn active" data-panel="map-panel">🗺 Map</button>
     <button class="nav-btn" data-panel="route-panel">📍 Route</button>
     <button class="nav-btn" data-panel="permits-panel">📋 Permits</button>
     <button class="nav-btn" data-panel="recs-panel">⭐ Recs</button>
+    <button id="btn-print" class="nav-btn" type="button" aria-label="Print or save trip plan as PDF">🖨 Print</button>
   </nav>
 </div>
 
@@ -203,7 +264,7 @@
     <div class="mm"><div class="mm-val rust">9</div><div class="mm-lbl">Permits</div></div>
     <div class="mm"><div class="mm-val sky">~295</div><div class="mm-lbl">Drive Hrs</div></div>
     <div class="mm"><div class="mm-val gold">90–120</div><div class="mm-lbl">Rec. Days</div></div>
-    <div class="mm"><div class="mm-val">3</div><div class="mm-lbl">Countries</div></div>
+    <div class="mm"><div class="mm-val" id="mm-countries" title="Countries visited">2</div><div class="mm-lbl">Countries</div></div>
   </div>
 </div>
 
@@ -271,7 +332,8 @@
 </nav>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="js/data.js"></script>
-<script src="js/app.js"></script>
+<script>window.__v = Date.now();</script>
+<script>document.write('<scr'+'ipt src="js/data.js?v='+window.__v+'"></scr'+'ipt>');</script>
+<script>document.write('<scr'+'ipt src="js/app.js?v='+window.__v+'"></scr'+'ipt>');</script>
 </body>
 </html>
