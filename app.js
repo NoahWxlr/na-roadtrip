@@ -6,13 +6,34 @@ const navBtns = document.querySelectorAll('.nav-btn');
 const panels  = document.querySelectorAll('.panel');
 let map, markersLayer, routeLine;
 
+// Mobile menu (hamburger) — opens a sheet with the same nav buttons.
+const mobMenuBtn = document.getElementById('mob-menu-btn');
+const mobMenu = document.getElementById('mob-menu');
+const mobMenuBackdrop = document.getElementById('mob-menu-backdrop');
+function setMobMenu(open) {
+  if (!mobMenu) return;
+  mobMenu.classList.toggle('open', open);
+  if (mobMenuBackdrop) mobMenuBackdrop.classList.toggle('open', open);
+  if (mobMenuBtn) mobMenuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+if (mobMenuBtn) mobMenuBtn.addEventListener('click', () => setMobMenu(!mobMenu.classList.contains('open')));
+if (mobMenuBackdrop) mobMenuBackdrop.addEventListener('click', () => setMobMenu(false));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMobMenu(false); });
+
 navBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    navBtns.forEach(b => b.classList.remove('active'));
+    // Buttons without a data-panel (e.g., Print) handle themselves elsewhere.
+    if (!btn.dataset.panel) { setMobMenu(false); return; }
+    const panel = btn.dataset.panel;
+    // Sync active across BOTH desktop nav and mobile menu (they share .nav-btn).
+    navBtns.forEach(b => {
+      if (!b.dataset.panel) return;
+      b.classList.toggle('active', b.dataset.panel === panel);
+    });
     panels.forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.panel).classList.add('active');
-    if (btn.dataset.panel === 'map-panel') {
+    document.getElementById(panel).classList.add('active');
+    setMobMenu(false);
+    if (panel === 'map-panel') {
       setTimeout(() => { if (map) map.invalidateSize(); }, 50);
     }
   });
@@ -208,7 +229,7 @@ function openSidebar(stop) {
     html += `<div class="sb-section">Highlights</div>`;
     stop.highlights.forEach(h => {
       html += `<div style="display:flex;gap:7px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.04)">
-        <span style="color:#3d5c3d;font-size:12px;flex-shrink:0;padding-top:1px">▸</span>
+        <span style="color:#3d5c3d;font-size:14px;flex-shrink:0;padding-top:1px">▸</span>
         <span class="sb-body">${h}</span>
       </div>`;
     });
@@ -489,8 +510,10 @@ function printPlan() {
   setTimeout(() => window.print(), 200);
 }
 
-const printBtn = document.getElementById('btn-print');
-if (printBtn) printBtn.addEventListener('click', printPlan);
+['btn-print', 'btn-print-mob'].forEach(id => {
+  const b = document.getElementById(id);
+  if (b) b.addEventListener('click', printPlan);
+});
 
 // ── SERVICE WORKER (offline-first) ─────────────────────────────────────────
 // Caches the app shell and map tiles so the site works without cell signal,
