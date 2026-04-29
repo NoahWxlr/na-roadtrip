@@ -49,8 +49,9 @@
     .mm-lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-top:2px}
 
     /* ── MOBILE MENU ── */
-    /* Hamburger button — only visible on mobile, sits in topbar */
-    #mob-menu-btn{display:none;align-items:center;justify-content:center;width:40px;height:40px;background:transparent;border:1px solid rgba(255,255,255,0.12);border-radius:8px;color:var(--text);font-size:20px;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent;flex-shrink:0}
+    /* Hamburger button — only visible on mobile, sits in topbar, right-aligned */
+    #mob-menu-btn{display:none;align-items:center;justify-content:center;width:44px;height:44px;background:transparent;border:1px solid rgba(255,255,255,0.18);border-radius:8px;color:var(--text);font-size:22px;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent;flex-shrink:0;margin-left:auto;margin-right:12px;pointer-events:auto;touch-action:manipulation}
+    #mob-menu-btn:active{background:rgba(255,255,255,0.06)}
     #mob-menu-btn:focus-visible{outline:2px solid var(--green);outline-offset:2px}
     #mob-menu-btn[aria-expanded="true"]{background:rgba(109,181,109,0.12);border-color:rgba(109,181,109,0.4);color:#8fd49a}
 

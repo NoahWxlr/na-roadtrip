@@ -1,6 +1,6 @@
 // Offline-first cache for the road trip app shell.
 // Bump CACHE_VERSION on every deploy so users get the new bundle next load.
-const CACHE_VERSION = 'roadtrip-v1';
+const CACHE_VERSION = 'roadtrip-v2';
 const TILES_CACHE = 'roadtrip-tiles-v1';
 
 const APP_SHELL = [
