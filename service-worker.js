@@ -1,6 +1,6 @@
 // Offline-first cache for the road trip app shell.
 // Bump CACHE_VERSION on every deploy so users get the new bundle next load.
-const CACHE_VERSION = 'roadtrip-v2';
+const CACHE_VERSION = 'roadtrip-v3';
 const TILES_CACHE = 'roadtrip-tiles-v1';
 
 const APP_SHELL = [
@@ -8,9 +8,16 @@ const APP_SHELL = [
   './index.html',
   './js/app.js',
   './js/data.js',
+  './js/supabase.js',
+  './js/export.js',
+  './js/gallery.js',
+  './js/journal.js',
   './style.css',
   'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css',
   'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js',
+  'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js',
+  'https://cdn.jsdelivr.net/npm/marked@12/marked.min.js',
+  'https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js',
 ];
 
 self.addEventListener('install', (event) => {
@@ -39,6 +46,29 @@ self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
+
+  // Supabase REST API → network-first (dynamic data must be fresh).
+  // Supabase Storage photos → cache-first after first view (offline photo access).
+  if (url.hostname.endsWith('.supabase.co')) {
+    const isStorage = url.pathname.startsWith('/storage/v1/object/public/');
+    if (isStorage) {
+      event.respondWith(
+        caches.open(CACHE_VERSION).then(async cache => {
+          const cached = await cache.match(req);
+          if (cached) return cached;
+          try {
+            const fresh = await fetch(req);
+            if (fresh && fresh.ok) cache.put(req, fresh.clone());
+            return fresh;
+          } catch {
+            return cached || new Response('', { status: 504 });
+          }
+        })
+      );
+    }
+    // REST API: network-first, no caching
+    return;
+  }
 
   // Map tiles → cache-first, populate on demand.
   if (

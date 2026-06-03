@@ -4,7 +4,8 @@
 // ── PANEL NAV ─────────────────────────────────────────────────────────────
 const navBtns = document.querySelectorAll('.nav-btn');
 const panels  = document.querySelectorAll('.panel');
-let map, markersLayer, routeLine;
+let map, markersLayer, routeLine, customPinLayer;
+const markerByNum = {};
 
 // Mobile menu (hamburger) — opens a sheet with the same nav buttons.
 const mobMenuBtn = document.getElementById('mob-menu-btn');
@@ -59,19 +60,18 @@ function initMap() {
 
 const TYPE_COLORS = { np: '#6db56d', city: '#5b9fd4', climb: '#c8a84b' };
 
-function makeIcon(stop) {
+function makeIcon(stop, hasJournal) {
   const color = stop.permit ? '#c46b3d' : (TYPE_COLORS[stop.type] || '#888');
   const size  = stop.permit ? 14 : 11;
+  const badge = hasJournal
+    ? `<div style="position:absolute;top:-3px;right:-3px;width:7px;height:7px;background:#6db56d;border-radius:50%;border:1px solid rgba(0,0,0,0.6)"></div>`
+    : '';
   return L.divIcon({
     className: '',
-    html: `<div style="
-      width:${size}px;height:${size}px;border-radius:50%;
-      background:${color};border:2px solid rgba(0,0,0,0.5);
-      box-shadow:0 0 6px ${color}88;
-      display:flex;align-items:center;justify-content:center;
-      font-size:7px;font-weight:700;color:rgba(0,0,0,0.7);
-      font-family:Inter,sans-serif;
-    ">${stop.num}</div>`,
+    html: `<div style="position:relative;width:${size}px;height:${size}px">
+      <div style="width:${size}px;height:${size}px;border-radius:50%;background:${color};border:2px solid rgba(0,0,0,0.5);box-shadow:0 0 6px ${color}88;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700;color:rgba(0,0,0,0.7);font-family:Inter,sans-serif">${stop.num}</div>
+      ${badge}
+    </div>`,
     iconSize:   [size, size],
     iconAnchor: [size/2, size/2],
     popupAnchor:[0, -size/2]
@@ -91,6 +91,16 @@ function drawRoute() {
   // Add markers — popups are interactive so the Google Maps link is clickable.
   // closeTimer + popup-hover handlers let the user move from marker → popup → link.
   markersLayer = L.layerGroup().addTo(map);
+  customPinLayer = L.layerGroup().addTo(map);
+
+  // Map click: hand off to journal.js pin-drop handler when active
+  map.on('click', (e) => {
+    if (typeof window.onMapPinDrop === 'function') {
+      window.onMapPinDrop(e.latlng.lat, e.latlng.lng);
+      window.onMapPinDrop = null;
+    }
+  });
+
   let closeTimer = null;
   const cancelClose = () => { if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; } };
   const scheduleClose = (m) => {
@@ -106,6 +116,7 @@ function drawRoute() {
       alt: `Stop ${stop.num}: ${stop.name}, ${stop.state}`
     });
     marker.addTo(markersLayer);
+    markerByNum[stop.num] = marker;
 
     const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stop.name + ', ' + stop.state)}`;
     const popupHtml = `
@@ -248,6 +259,7 @@ function openSidebar(stop) {
   document.getElementById('sidebar-content').innerHTML = html;
   document.getElementById('map-sidebar').classList.add('open');
   setTimeout(() => { if (map) map.invalidateSize(); }, 320);
+  document.dispatchEvent(new CustomEvent('na-sidebar-open', { detail: { stopNum: stop.num } }));
 }
 
 // ── ROUTE LIST ─────────────────────────────────────────────────────────────
@@ -513,6 +525,73 @@ function printPlan() {
 ['btn-print', 'btn-print-mob'].forEach(id => {
   const b = document.getElementById(id);
   if (b) b.addEventListener('click', printPlan);
+});
+
+// ── EXPORT DROPDOWN ────────────────────────────────────────────────────────
+const exportBtn = document.getElementById('export-btn');
+const exportMenu = document.getElementById('export-menu');
+if (exportBtn && exportMenu) {
+  exportBtn.addEventListener('click', () => {
+    const open = !exportMenu.hidden;
+    exportMenu.hidden = open;
+    exportBtn.setAttribute('aria-expanded', String(!open));
+  });
+  document.addEventListener('click', e => {
+    if (!document.getElementById('export-wrap')?.contains(e.target)) {
+      exportMenu.hidden = true;
+      exportBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+document.getElementById('export-gpx-mob')?.addEventListener('click', () => { downloadGPX(); setMobMenu(false); });
+document.getElementById('export-kml-mob')?.addEventListener('click', () => { downloadKML(); setMobMenu(false); });
+
+// ── JOURNAL MAP INTEGRATION ────────────────────────────────────────────────
+// When journal.js loads entries it fires this event; we update stop marker badges
+// and add custom-pin markers for off-route entries.
+document.addEventListener('journal-entries-updated', (e) => {
+  const entries = e.detail.entries || [];
+  const withJournal = new Set(entries.filter(en => en.stop_num != null).map(en => en.stop_num));
+
+  STOPS.forEach(s => {
+    const m = markerByNum[s.num];
+    if (m) m.setIcon(makeIcon(s, withJournal.has(s.num)));
+  });
+
+  if (customPinLayer) customPinLayer.clearLayers();
+  entries.filter(en => en.custom_lat != null).forEach(en => {
+    const pinIcon = L.divIcon({
+      className: '',
+      html: `<div style="position:relative;width:14px;height:14px"><div style="width:14px;height:14px;border-radius:50%;background:#c46b3d;border:2px solid rgba(0,0,0,0.5);box-shadow:0 0 6px #c46b3d88;display:flex;align-items:center;justify-content:center;font-size:9px">📖</div></div>`,
+      iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -8]
+    });
+    const m = L.marker([en.custom_lat, en.custom_lng], {
+      icon: pinIcon,
+      title: en.custom_label || 'Journal entry',
+      keyboard: true
+    });
+    m.on('click', () => {
+      const content = document.getElementById('sidebar-content');
+      if (content) {
+        content.innerHTML = `
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+            <div class="sb-num" style="background:rgba(196,107,61,0.15);color:#c46b3d">📖</div>
+            <div>
+              <div class="sb-name">${escapeHtml(en.custom_label || 'Journal pin')}</div>
+              <div class="sb-state">Custom location</div>
+            </div>
+          </div>
+          <div class="sb-section">Journal</div>
+          <div class="sb-journal-entry">
+            <div class="sb-journal-date">${escapeHtml(en.entry_date)}</div>
+            <div class="sb-journal-title"><a href="?entry=${encodeURIComponent(en.slug)}">${escapeHtml(en.title)}</a></div>
+          </div>`;
+      }
+      document.getElementById('map-sidebar').classList.add('open');
+      setTimeout(() => { if (map) map.invalidateSize(); }, 320);
+    });
+    if (customPinLayer) m.addTo(customPinLayer);
+  });
 });
 
 // ── SERVICE WORKER (offline-first) ─────────────────────────────────────────
