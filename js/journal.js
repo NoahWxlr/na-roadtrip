@@ -16,60 +16,172 @@
 
   // ── AUTH ───────────────────────────────────────────────────────────────────
 
+  function showSetPwBar() {
+    const setpwBar = document.getElementById('jnl-setpw-bar');
+    if (!setpwBar) return;
+    setpwBar.style.display = '';
+    document.querySelector('[data-panel="journal-panel"]')?.click();
+    setTimeout(() => setpwBar.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 150);
+  }
+
   function setSession(session) {
     _session = session;
-    const newBtn = document.getElementById('jnl-new-btn');
     const authBar = document.getElementById('jnl-auth-bar');
-    if (!newBtn || !authBar) return;
+    const setpwBar = document.getElementById('jnl-setpw-bar');
+    const magicBtn = document.getElementById('jnl-magic-btn');
+    const signoutBtn = document.getElementById('jnl-signout-btn');
+    const pwSet = localStorage.getItem('jnl-pw-set') === '1';
     if (session) {
-      newBtn.style.display = '';
-      authBar.style.display = 'none';
+      if (authBar) authBar.style.display = 'none';
+      if (setpwBar) setpwBar.style.display = pwSet ? 'none' : '';
+      if (signoutBtn) signoutBtn.style.display = '';
     } else {
-      newBtn.style.display = 'none';
-      const adminMode = new URLSearchParams(location.search).get('admin') === '1';
-      authBar.style.display = adminMode ? '' : 'none';
+      if (setpwBar) setpwBar.style.display = 'none';
+      if (signoutBtn) signoutBtn.style.display = 'none';
     }
+    if (magicBtn) magicBtn.style.display = pwSet ? 'none' : '';
   }
 
   function showAuthUI() {
-    const authBar = document.getElementById('jnl-auth-bar');
-    if (!authBar) return;
+    // Switch to journal panel if needed, then reveal the sign-in form
     if (!document.getElementById('journal-panel').classList.contains('active')) {
       document.querySelector('[data-panel="journal-panel"]')?.click();
     }
-    authBar.style.display = '';
-    authBar.scrollIntoView({ behavior: 'smooth' });
+    const authBar = document.getElementById('jnl-auth-bar');
+    if (authBar) {
+      authBar.style.display = '';
+      setTimeout(() => authBar.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 80);
+    }
+  }
+
+  function handleNewEntryClick() {
+    if (_session) {
+      openForm();
+    } else {
+      showAuthUI();
+    }
   }
 
   // ── INIT ───────────────────────────────────────────────────────────────────
 
   async function init() {
+    // Check URL hash immediately — Supabase puts type=recovery here when arriving
+    // from a password reset email. Must run before any async calls so we don't miss it.
+    const hashParams = new URLSearchParams(window.location.hash.slice(1));
+    const isRecovery = hashParams.get('type') === 'recovery';
+    if (isRecovery) {
+      localStorage.removeItem('jnl-pw-set');
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+    // ?resetpw=1 lets us manually clear a stale flag during dev/troubleshooting
+    if (new URLSearchParams(location.search).get('resetpw') === '1') {
+      localStorage.removeItem('jnl-pw-set');
+    }
+
     _session = await sbGetSession();
-    sbOnAuthChange((_, session) => {
+    sbOnAuthChange((event, session) => {
+      if (event === 'PASSWORD_RECOVERY' || (isRecovery && event === 'SIGNED_IN')) {
+        _session = session;
+        document.getElementById('jnl-auth-bar')?.style && (document.getElementById('jnl-auth-bar').style.display = 'none');
+        showSetPwBar();
+        return;
+      }
       setSession(session);
-      if (session) loadEntries();
+      if (session) {
+        loadEntries();
+        const authBar = document.getElementById('jnl-auth-bar');
+        if (authBar && authBar.style.display !== 'none') {
+          authBar.style.display = 'none';
+          openForm();
+        }
+      }
     });
+
+    // If we landed via recovery link and Supabase already has a session, show the bar now
+    if (isRecovery && _session) showSetPwBar();
+
     setSession(_session);
 
     // Keyboard shortcut: Shift+L shows auth UI
     document.addEventListener('keydown', e => { if (e.shiftKey && e.key === 'L') showAuthUI(); });
 
-    // Sign-in form
+    // Gallery "Add Photos" button routes to the journal new-entry flow
+    document.getElementById('gallery-add-btn')?.addEventListener('click', () => {
+      document.querySelector('[data-panel="journal-panel"]')?.click();
+      handleNewEntryClick();
+    });
+
+    // Password sign-in
+    const pwInput = document.getElementById('jnl-password');
     document.getElementById('jnl-signin-btn')?.addEventListener('click', async () => {
-      const emailInput = document.getElementById('jnl-auth-email');
       const btn = document.getElementById('jnl-signin-btn');
-      const email = emailInput?.value.trim();
-      if (!email) return;
+      const errEl = document.getElementById('jnl-auth-error');
+      const password = pwInput?.value;
+      if (!password) return;
+      btn.textContent = 'Signing in…';
+      btn.disabled = true;
+      errEl.style.display = 'none';
+      const { error } = await sbSignInWithPassword(password);
+      if (error) {
+        btn.textContent = 'Sign in';
+        btn.disabled = false;
+        errEl.style.display = '';
+        pwInput.value = '';
+        pwInput.focus();
+      }
+    });
+    pwInput?.addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('jnl-signin-btn')?.click();
+    });
+
+    // Forgot password — sends a reset link to the owner's inbox
+    document.getElementById('jnl-reset-btn')?.addEventListener('click', async () => {
+      const btn = document.getElementById('jnl-reset-btn');
       btn.textContent = 'Sending…';
       btn.disabled = true;
-      const { error } = await sbSignIn(email);
+      const { error } = await sbSendPasswordReset();
       if (error) {
-        btn.textContent = 'Send Magic Link';
+        btn.textContent = 'Forgot password? Send reset link →';
         btn.disabled = false;
-        alert('Error: ' + error.message);
       } else {
-        document.getElementById('jnl-auth-bar').innerHTML =
-          '<div class="jnl-auth-sent">✓ Check your email for a sign-in link.</div>';
+        btn.textContent = '✓ Reset link sent — check your inbox.';
+      }
+    });
+
+    // Magic link fallback — used once to establish a session so a password can be set
+    document.getElementById('jnl-magic-btn')?.addEventListener('click', async () => {
+      const btn = document.getElementById('jnl-magic-btn');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      const { error } = await sbSendMagicLink();
+      if (error) {
+        btn.textContent = 'Or send a magic link instead →';
+        btn.disabled = false;
+      } else {
+        btn.textContent = '✓ Magic link sent — check your inbox.';
+      }
+    });
+
+    // Set-password flow (shown when logged in via magic link with no password yet)
+    document.getElementById('jnl-setpw-btn')?.addEventListener('click', async () => {
+      const btn = document.getElementById('jnl-setpw-btn');
+      const input = document.getElementById('jnl-new-password');
+      const msg = document.getElementById('jnl-setpw-msg');
+      const pw = input?.value;
+      if (!pw || pw.length < 8) { msg.textContent = 'Password must be at least 8 characters.'; msg.style.cssText = 'display:;color:var(--rust);font-size:13px;margin-top:7px'; return; }
+      btn.textContent = 'Saving…'; btn.disabled = true;
+      const { error } = await sbSetPassword(pw);
+      if (error) {
+        msg.textContent = 'Error: ' + error.message;
+        msg.style.cssText = 'display:;color:var(--rust);font-size:13px;margin-top:7px';
+        btn.textContent = 'Set password'; btn.disabled = false;
+      } else {
+        localStorage.setItem('jnl-pw-set', '1');
+        const bar = document.getElementById('jnl-setpw-bar');
+        if (bar) bar.innerHTML = '<div class="jnl-auth-card"><div class="jnl-auth-sent">✓ Password set. Sign in with it directly from now on.</div></div>';
+        // Hide the magic link button now that a permanent password exists
+        const magicBtn = document.getElementById('jnl-magic-btn');
+        if (magicBtn) magicBtn.style.display = 'none';
       }
     });
 
@@ -77,8 +189,8 @@
       await sbSignOut();
     });
 
-    // New entry button
-    document.getElementById('jnl-new-btn')?.addEventListener('click', () => openForm());
+    // New entry button — always visible; shows auth flow if not signed in
+    document.getElementById('jnl-new-btn')?.addEventListener('click', handleNewEntryClick);
 
     // Form controls
     document.getElementById('jnl-form-close')?.addEventListener('click', closeForm);
@@ -173,7 +285,7 @@
         <div class="jnl-card-body prose">${safeBody}</div>
         ${photoStrip}
         <div class="jnl-card-actions">
-          <a class="jnl-permalink" href="?entry=${encodeURIComponent(entry.slug)}" title="Permalink">🔗 Share</a>
+          <button class="jnl-permalink" data-share-slug="${esc(entry.slug)}" data-share-title="${esc(entry.title)}" type="button">🔗 Share</button>
           ${isOwner ? `<button class="jnl-edit-btn" data-id="${esc(entry.id)}">Edit</button>
           <button class="jnl-del-btn" data-id="${esc(entry.id)}">Delete</button>` : ''}
         </div>
@@ -192,6 +304,27 @@
       };
       img.addEventListener('click', open);
       img.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    });
+
+    list.querySelectorAll('[data-share-slug]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const slug_ = btn.dataset.shareSlug;
+        const title = btn.dataset.shareTitle;
+        const url = `${location.origin}${location.pathname}?entry=${encodeURIComponent(slug_)}`;
+        // Use native share sheet on mobile if available
+        if (navigator.share) {
+          try { await navigator.share({ title, url }); return; } catch (_) {}
+        }
+        // Fallback: copy to clipboard
+        try {
+          await navigator.clipboard.writeText(url);
+          const orig = btn.textContent;
+          btn.textContent = '✓ Copied!';
+          setTimeout(() => { btn.textContent = orig; }, 2000);
+        } catch (_) {
+          prompt('Copy this link:', url);
+        }
+      });
     });
   }
 

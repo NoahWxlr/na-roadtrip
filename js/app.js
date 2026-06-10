@@ -333,7 +333,6 @@ function renderRoute() {
           <span class="dist-chip">${escapeHtml(s.miles)} · ${escapeHtml(s.hrs)}</span>
         </div>
         ${chips.length ? `<div class="info-chips">${chips.join('')}</div>` : ''}
-        ${buildPrintBlock(s)}
       </div>`;
 
     row.addEventListener('click', () => {
@@ -360,30 +359,6 @@ function renderRoute() {
   });
 }
 
-// Print-only block per stop — hidden on screen, shown when printing.
-// Includes everything you'd want offline: highlights, camping, permit notes,
-// season warnings, full driving info, and Google Maps URLs.
-function buildPrintBlock(s) {
-  const parts = [];
-  parts.push(`<strong>${escapeHtml(s.name)}, ${escapeHtml(s.state)}</strong>`);
-  if (typeof s.elev === 'number') parts.push(`Elevation: ${s.elev.toLocaleString()} ft · ${escapeHtml(s.climate || '')}`);
-  parts.push(`Drive to next: ${escapeHtml(s.miles)} (${escapeHtml(s.hrs)})`);
-  if (s.seasonNote) parts.push(`<strong>Season:</strong> ${escapeHtml(s.seasonNote)}`);
-  if (s.permitNote) parts.push(`<strong>Permit:</strong> ${escapeHtml(s.permitNote)}`);
-
-  let inner = parts.map(p => `<div>${p}</div>`).join('');
-
-  if (s.highlights && s.highlights.length) {
-    inner += `<div><strong>Highlights:</strong></div><ul>${s.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join('')}</ul>`;
-  }
-  if (s.camping && s.camping.length) {
-    inner += `<div><strong>Camping:</strong></div><ul>${s.camping.map(c => `<li><strong>${escapeHtml(c.name)}:</strong> ${escapeHtml(c.detail)}</li>`).join('')}</ul>`;
-  }
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.name + ', ' + s.state)}`;
-  inner += `<div>Google Maps: <a href="${mapsUrl}">${mapsUrl}</a></div>`;
-
-  return `<div class="print-block">${inner}</div>`;
-}
 
 // ── PERMITS ────────────────────────────────────────────────────────────────
 // Build the countdown badge HTML for a permit's `next` window.
@@ -503,29 +478,6 @@ function renderMetrics() {
   });
 }
 
-// ── PRINT / EXPORT ─────────────────────────────────────────────────────────
-// Switch to the route panel before printing so the print stylesheet has
-// the full route content ready to render. window.print() in modern browsers
-// includes a "Save as PDF" destination, so this doubles as PDF export.
-function printPlan() {
-  navBtns.forEach(b => b.classList.remove('active'));
-  panels.forEach(p => p.classList.remove('active'));
-  const routeBtn = document.querySelector('[data-panel="route-panel"]');
-  if (routeBtn) routeBtn.classList.add('active');
-  document.getElementById('route-panel').classList.add('active');
-  // Clear search/filter so all stops print
-  searchQ = ''; activeFilter = 'all';
-  const search = document.getElementById('route-search');
-  if (search) search.value = '';
-  document.querySelectorAll('.rf-btn').forEach(b => b.classList.toggle('on', b.dataset.f === 'all'));
-  renderRoute();
-  setTimeout(() => window.print(), 200);
-}
-
-['btn-print', 'btn-print-mob'].forEach(id => {
-  const b = document.getElementById(id);
-  if (b) b.addEventListener('click', printPlan);
-});
 
 // ── EXPORT DROPDOWN ────────────────────────────────────────────────────────
 const exportBtn = document.getElementById('export-btn');

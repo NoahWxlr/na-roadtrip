@@ -13,8 +13,22 @@
     return session;
   };
 
-  window.sbSignIn = function (email) {
-    return _sb.auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.href } });
+  window.sbSendMagicLink = function () {
+    return _sb.auth.signInWithOtp({ email: 'noahwxlr@gmail.com', options: { emailRedirectTo: window.location.href } });
+  };
+
+  window.sbSignInWithPassword = function (password) {
+    return _sb.auth.signInWithPassword({ email: 'noahwxlr@gmail.com', password });
+  };
+
+  window.sbSetPassword = function (newPassword) {
+    return _sb.auth.updateUser({ password: newPassword });
+  };
+
+  window.sbSendPasswordReset = function () {
+    return _sb.auth.resetPasswordForEmail('noahwxlr@gmail.com', {
+      redirectTo: window.location.origin + window.location.pathname
+    });
   };
 
   window.sbSignOut = function () { return _sb.auth.signOut(); };
