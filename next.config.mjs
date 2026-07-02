@@ -18,6 +18,19 @@ const nextConfig = {
       },
     ]
   },
+  async headers() {
+    return [
+      {
+        // Never HTTP-cache the service worker so the self-destruct update is
+        // always picked up on the next visit.
+        source: '/service-worker.js',
+        headers: [
+          { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' },
+          { key: 'Service-Worker-Allowed', value: '/' },
+        ],
+      },
+    ]
+  },
 }
 
 export default nextConfig
