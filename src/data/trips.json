@@ -8,14 +8,28 @@
     "months": "Oct",
     "intensity": 1,
     "days": 17,
-    "countries": ["Japan", "Singapore"],
-    "coords": [36.2048, 138.2529],
+    "countries": [
+      "Japan",
+      "Singapore"
+    ],
+    "coords": [
+      36.2048,
+      138.2529
+    ],
     "note": "Oct 3–17 booked. Add 3–4 nights Singapore en route. Fall foliage (koyo) season across Honshu is peak timing.",
-    "activities": ["Tokyo neighborhoods (Shibuya, Asakusa)", "Kyoto temples", "Mt. Fuji", "Osaka food scene", "Gardens by the Bay", "Singapore hawker food tours"],
+    "activities": [
+      "Tokyo neighborhoods (Shibuya, Asakusa)",
+      "Kyoto temples",
+      "Mt. Fuji",
+      "Osaka food scene",
+      "Gardens by the Bay",
+      "Singapore hawker food tours"
+    ],
     "bestTime": "Oct 3–17 2026 already booked — excellent timing for fall foliage (koyo) season",
     "heroPhoto": "travel/japan-singapore-2026/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1aT3kbyL19qvy96y72j6zTs1WVQqXlxtTC84UZ2bJcMk/edit?usp=sharing"
   },
   {
     "slug": "three-passes-nepal-2027",
@@ -26,14 +40,26 @@
     "months": "Nov",
     "intensity": 5,
     "days": 21,
-    "countries": ["Nepal"],
-    "coords": [27.9881, 86.925],
+    "countries": [
+      "Nepal"
+    ],
+    "coords": [
+      27.9881,
+      86.925
+    ],
     "note": "The Everest region's high route — Kongma La, Cho La, and Renjo La passes, all above 5,000m. Acclimatization is everything.",
-    "activities": ["Kongma La, Cho La, Renjo La passes", "Everest Base Camp", "Gokyo Lakes", "Namche Bazaar", "Kala Patthar sunrise"],
+    "activities": [
+      "Kongma La, Cho La, Renjo La passes",
+      "Everest Base Camp",
+      "Gokyo Lakes",
+      "Namche Bazaar",
+      "Kala Patthar sunrise"
+    ],
     "bestTime": "Late Oct–Nov for clear post-monsoon skies and stable weather",
     "heroPhoto": "travel/three-passes-nepal-2027/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1RX7dAS1KDl4IjKZ5Bg4hA6sIOsaSf2dh5t4ZrqsHUOU/edit?usp=sharing"
   },
   {
     "slug": "peru-huayhuash-2028",
@@ -44,14 +70,26 @@
     "months": "Jun–Jul",
     "intensity": 5,
     "days": 18,
-    "countries": ["Peru"],
-    "coords": [-10.27, -76.9],
+    "countries": [
+      "Peru"
+    ],
+    "coords": [
+      -10.27,
+      -76.9
+    ],
     "note": "The Cordillera Huayhuash circuit — one of the most beautiful and demanding treks on earth. Bookended by Cusco and Machu Picchu.",
-    "activities": ["Huayhuash Circuit", "Machu Picchu", "Sacred Valley", "Rainbow Mountain", "Lima food scene"],
+    "activities": [
+      "Huayhuash Circuit",
+      "Machu Picchu",
+      "Sacred Valley",
+      "Rainbow Mountain",
+      "Lima food scene"
+    ],
     "bestTime": "Jun–Aug dry season for the high Andes",
     "heroPhoto": "travel/peru-huayhuash-2028/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1Csdbz4t0JFI17NOhLC3ppAS8T_D_EdAVrrZL2AtTpiQ/edit?usp=sharing"
   },
   {
     "slug": "new-england-loop-2028",
@@ -62,14 +100,26 @@
     "months": "Oct",
     "intensity": 2,
     "days": 12,
-    "countries": ["United States"],
-    "coords": [44.0, -71.5],
+    "countries": [
+      "United States"
+    ],
+    "coords": [
+      44,
+      -71.5
+    ],
     "note": "Peak fall foliage road trip through Vermont, New Hampshire, and Maine. Covered ground on the NA road trip but worth its own slow loop.",
-    "activities": ["White Mountains", "Acadia", "Vermont back roads", "Kancamagus Highway", "Coastal Maine seafood"],
+    "activities": [
+      "White Mountains",
+      "Acadia",
+      "Vermont back roads",
+      "Kancamagus Highway",
+      "Coastal Maine seafood"
+    ],
     "bestTime": "Early–mid October for peak foliage",
     "heroPhoto": "travel/new-england-loop-2028/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/spreadsheets/d/1uwrzmrQI8te-6ts9wagURRjzZee79p_GuMMlg6--8qM/edit?usp=sharing"
   },
   {
     "slug": "chile-wtrek-2029",
@@ -80,14 +130,26 @@
     "months": "Dec–Jan",
     "intensity": 4,
     "days": 16,
-    "countries": ["Chile"],
-    "coords": [-50.94, -73.4],
+    "countries": [
+      "Chile"
+    ],
+    "coords": [
+      -50.94,
+      -73.4
+    ],
     "note": "Torres del Paine's W-Trek in the Patagonian summer, plus the Atacama and Santiago.",
-    "activities": ["W-Trek in Torres del Paine", "Base of the Towers sunrise", "Grey Glacier", "Atacama Desert", "Santiago wine country"],
+    "activities": [
+      "W-Trek in Torres del Paine",
+      "Base of the Towers sunrise",
+      "Grey Glacier",
+      "Atacama Desert",
+      "Santiago wine country"
+    ],
     "bestTime": "Dec–Feb for the Patagonian summer",
     "heroPhoto": "travel/chile-wtrek-2029/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1USRhyCjxe57vGSsNb6-_aXqwbQ8kVDPiSdYuKFl4O5s/edit?usp=sharing"
   },
   {
     "slug": "traumpfad-2031",
@@ -98,14 +160,28 @@
     "months": "Aug–Sep",
     "intensity": 4,
     "days": 28,
-    "countries": ["Germany", "Austria", "Italy"],
-    "coords": [46.8, 11.5],
+    "countries": [
+      "Germany",
+      "Austria",
+      "Italy"
+    ],
+    "coords": [
+      46.8,
+      11.5
+    ],
     "note": "The 'Dream Path' — a ~550km trek across the Alps from Munich to Venice, ending on the Grand Canal.",
-    "activities": ["Bavarian Alps", "Dolomites crossing", "Alpine huts (rifugi)", "Arrival in Venice by foot", "Traditional mountain villages"],
+    "activities": [
+      "Bavarian Alps",
+      "Dolomites crossing",
+      "Alpine huts (rifugi)",
+      "Arrival in Venice by foot",
+      "Traditional mountain villages"
+    ],
     "bestTime": "Late Jul–Sep for open high passes and hut season",
     "heroPhoto": "travel/traumpfad-2031/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1MpstTKws7n81dP0io9rdRAZjLy5xB1-cTDh0XCS0hbI/edit?usp=sharing"
   },
   {
     "slug": "switzerland-haute-route-2032",
@@ -116,14 +192,27 @@
     "months": "Sep",
     "intensity": 5,
     "days": 14,
-    "countries": ["Switzerland", "France"],
-    "coords": [46.0, 7.75],
+    "countries": [
+      "Switzerland",
+      "France"
+    ],
+    "coords": [
+      46,
+      7.75
+    ],
     "note": "The classic Chamonix-to-Zermatt Haute Route — Mont Blanc to the Matterhorn, hut to hut.",
-    "activities": ["Chamonix to Zermatt trek", "Matterhorn views", "Alpine huts", "Glacier crossings", "Swiss rail scenic routes"],
+    "activities": [
+      "Chamonix to Zermatt trek",
+      "Matterhorn views",
+      "Alpine huts",
+      "Glacier crossings",
+      "Swiss rail scenic routes"
+    ],
     "bestTime": "Sep for stable weather and quieter trails",
     "heroPhoto": "travel/switzerland-haute-route-2032/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1L6T6_GP7ulNHg-Vh_yqKloJoDslchUPRD8Jjvi6Ddxk/edit?usp=sharing"
   },
   {
     "slug": "argentina-2032",
@@ -134,14 +223,26 @@
     "months": "Nov",
     "intensity": 2,
     "days": 14,
-    "countries": ["Argentina"],
-    "coords": [-38.4, -63.6],
+    "countries": [
+      "Argentina"
+    ],
+    "coords": [
+      -38.4,
+      -63.6
+    ],
     "note": "Buenos Aires, Mendoza wine country, and the northern Patagonian lakes.",
-    "activities": ["Buenos Aires", "Mendoza vineyards", "Iguazú Falls", "Bariloche lakes", "Tango and asado"],
+    "activities": [
+      "Buenos Aires",
+      "Mendoza vineyards",
+      "Iguazú Falls",
+      "Bariloche lakes",
+      "Tango and asado"
+    ],
     "bestTime": "Oct–Dec spring shoulder season",
     "heroPhoto": "travel/argentina-2032/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1UmQUSaHKXbi1yzvzHH0RrWvp14KvNrGKFPOCD5QO-YQ/edit?usp=sharing"
   },
   {
     "slug": "norway-faroes-2034",
@@ -152,14 +253,27 @@
     "months": "Jun",
     "intensity": 3,
     "days": 15,
-    "countries": ["Norway", "Faroe Islands"],
-    "coords": [61.5, 8.0],
+    "countries": [
+      "Norway",
+      "Faroe Islands"
+    ],
+    "coords": [
+      61.5,
+      8
+    ],
     "note": "Fjords, midnight sun, and the wild green cliffs of the Faroes.",
-    "activities": ["Lofoten Islands", "Trolltunga hike", "Geirangerfjord", "Faroe Islands cliffs", "Bergen"],
+    "activities": [
+      "Lofoten Islands",
+      "Trolltunga hike",
+      "Geirangerfjord",
+      "Faroe Islands cliffs",
+      "Bergen"
+    ],
     "bestTime": "Jun–Jul for the midnight sun",
     "heroPhoto": "travel/norway-faroes-2034/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1d2qp8NkhN1elhFOKQeHkoo8vcwXe0ufoXI3zAsSX3Ng/edit?usp=sharing"
   },
   {
     "slug": "iceland-2034",
@@ -170,14 +284,26 @@
     "months": "Sep",
     "intensity": 2,
     "days": 12,
-    "countries": ["Iceland"],
-    "coords": [64.9631, -19.0208],
+    "countries": [
+      "Iceland"
+    ],
+    "coords": [
+      64.9631,
+      -19.0208
+    ],
     "note": "The Ring Road plus the Westfjords — waterfalls, glaciers, and early-season aurora.",
-    "activities": ["Ring Road drive", "Jökulsárlón glacier lagoon", "Westfjords", "Golden Circle", "Highland hot springs"],
+    "activities": [
+      "Ring Road drive",
+      "Jökulsárlón glacier lagoon",
+      "Westfjords",
+      "Golden Circle",
+      "Highland hot springs"
+    ],
     "bestTime": "Sep for accessible roads plus first aurora",
     "heroPhoto": "travel/iceland-2034/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1BiafPeGqJc_mGHkDc7NlWGQZpvLPaUAFtgizAF7h6so/edit?usp=sharing"
   },
   {
     "slug": "sweden-finland-denmark-2035",
@@ -188,14 +314,28 @@
     "months": "Jun",
     "intensity": 2,
     "days": 16,
-    "countries": ["Sweden", "Finland", "Denmark"],
-    "coords": [60.0, 18.0],
+    "countries": [
+      "Sweden",
+      "Finland",
+      "Denmark"
+    ],
+    "coords": [
+      60,
+      18
+    ],
     "note": "Scandinavian capitals, archipelagos, and design culture across three countries.",
-    "activities": ["Stockholm archipelago", "Copenhagen design", "Helsinki sauna culture", "Baltic ferries", "Nordic food"],
+    "activities": [
+      "Stockholm archipelago",
+      "Copenhagen design",
+      "Helsinki sauna culture",
+      "Baltic ferries",
+      "Nordic food"
+    ],
     "bestTime": "Jun–Aug for long daylight and warm cities",
     "heroPhoto": "travel/sweden-finland-denmark-2035/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1_dgK13cuM7aLrtrco2NO6qzmhXrAUgFYzQR3O3QKdUs/edit?usp=sharing"
   },
   {
     "slug": "honduras-2035",
@@ -206,14 +346,26 @@
     "months": "Feb",
     "intensity": 2,
     "days": 10,
-    "countries": ["Honduras"],
-    "coords": [15.2, -86.24],
+    "countries": [
+      "Honduras"
+    ],
+    "coords": [
+      15.2,
+      -86.24
+    ],
     "note": "Roatán diving on the Mesoamerican reef plus Copán's Maya ruins.",
-    "activities": ["Roatán reef diving", "Copán ruins", "Cloud forest", "Caribbean coast", "Bay Islands"],
+    "activities": [
+      "Roatán reef diving",
+      "Copán ruins",
+      "Cloud forest",
+      "Caribbean coast",
+      "Bay Islands"
+    ],
     "bestTime": "Feb–Apr dry season",
     "heroPhoto": "travel/honduras-2035/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/142ek2WjKs7AsY0JSPCVaQ7weMRQ-UaLXLmqYxfSiC20/edit?usp=sharing"
   },
   {
     "slug": "germany-austria-2036",
@@ -224,14 +376,27 @@
     "months": "Sep",
     "intensity": 2,
     "days": 14,
-    "countries": ["Germany", "Austria"],
-    "coords": [48.5, 12.5],
+    "countries": [
+      "Germany",
+      "Austria"
+    ],
+    "coords": [
+      48.5,
+      12.5
+    ],
     "note": "Bavaria and the Austrian Alps — castles, beer halls, and mountain lakes.",
-    "activities": ["Neuschwanstein", "Munich", "Salzburg", "Hallstatt", "Bavarian Alps"],
+    "activities": [
+      "Neuschwanstein",
+      "Munich",
+      "Salzburg",
+      "Hallstatt",
+      "Bavarian Alps"
+    ],
     "bestTime": "Sep for Oktoberfest and clear alpine weather",
     "heroPhoto": "travel/germany-austria-2036/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1XI56S4oUpoFdX1ryOyUliJWdstGzudZSLLf1Zx_TcGI/edit?usp=sharing"
   },
   {
     "slug": "belgium-netherlands-2036",
@@ -242,14 +407,27 @@
     "months": "Apr",
     "intensity": 1,
     "days": 9,
-    "countries": ["Belgium", "Netherlands"],
-    "coords": [51.5, 5.0],
+    "countries": [
+      "Belgium",
+      "Netherlands"
+    ],
+    "coords": [
+      51.5,
+      5
+    ],
     "note": "Canals, tulip season, and the Low Countries' art cities.",
-    "activities": ["Amsterdam", "Bruges", "Keukenhof tulips", "Ghent", "Cycling the canals"],
+    "activities": [
+      "Amsterdam",
+      "Bruges",
+      "Keukenhof tulips",
+      "Ghent",
+      "Cycling the canals"
+    ],
     "bestTime": "Apr for peak tulip bloom",
     "heroPhoto": "travel/belgium-netherlands-2036/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1KxOrMb3rKzVZ_JXK8OyxoqUK97Agd2LwI8mVWNYH8pI/edit?usp=sharing"
   },
   {
     "slug": "france-monaco-2038",
@@ -260,14 +438,27 @@
     "months": "May",
     "intensity": 1,
     "days": 14,
-    "countries": ["France", "Monaco"],
-    "coords": [46.6, 2.3],
+    "countries": [
+      "France",
+      "Monaco"
+    ],
+    "coords": [
+      46.6,
+      2.3
+    ],
     "note": "Paris, Provence, and the Côte d'Azur down to Monaco.",
-    "activities": ["Paris", "Provence lavender", "French Riviera", "Monaco", "Loire Valley châteaux"],
+    "activities": [
+      "Paris",
+      "Provence lavender",
+      "French Riviera",
+      "Monaco",
+      "Loire Valley châteaux"
+    ],
     "bestTime": "May–Jun before peak summer crowds",
     "heroPhoto": "travel/france-monaco-2038/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1LEUfevO2_6mxo4AGwU7PmqLgAi7NSpZvpVOmNXotoVM/edit?usp=sharing"
   },
   {
     "slug": "portugal-2038",
@@ -278,14 +469,26 @@
     "months": "Sep",
     "intensity": 1,
     "days": 11,
-    "countries": ["Portugal"],
-    "coords": [39.4, -8.2],
+    "countries": [
+      "Portugal"
+    ],
+    "coords": [
+      39.4,
+      -8.2
+    ],
     "note": "Lisbon, Porto, the Douro Valley, and the Algarve coast.",
-    "activities": ["Lisbon", "Porto and port tasting", "Douro Valley", "Sintra", "Algarve beaches"],
+    "activities": [
+      "Lisbon",
+      "Porto and port tasting",
+      "Douro Valley",
+      "Sintra",
+      "Algarve beaches"
+    ],
     "bestTime": "Sep for warm weather and harvest season",
     "heroPhoto": "travel/portugal-2038/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1VcQcIXf_uqO1WjoSBBqyNnxd9lLwkd7bJfte-6xuJEE/edit?usp=sharing"
   },
   {
     "slug": "croatia-montenegro-2039",
@@ -296,14 +499,27 @@
     "months": "Jun",
     "intensity": 2,
     "days": 13,
-    "countries": ["Croatia", "Montenegro"],
-    "coords": [43.3, 17.5],
+    "countries": [
+      "Croatia",
+      "Montenegro"
+    ],
+    "coords": [
+      43.3,
+      17.5
+    ],
     "note": "The Dalmatian coast, island hopping, and the Bay of Kotor.",
-    "activities": ["Dubrovnik", "Split", "Plitvice Lakes", "Bay of Kotor", "Adriatic sailing"],
+    "activities": [
+      "Dubrovnik",
+      "Split",
+      "Plitvice Lakes",
+      "Bay of Kotor",
+      "Adriatic sailing"
+    ],
     "bestTime": "Jun or Sep to dodge peak summer heat",
     "heroPhoto": "travel/croatia-montenegro-2039/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/13HG4JJCJD0HwRiMEuR-rINGEYl8m5C5Fbuk-BO4e11s/edit?usp=sharing"
   },
   {
     "slug": "morocco-2039",
@@ -314,14 +530,26 @@
     "months": "Oct",
     "intensity": 3,
     "days": 12,
-    "countries": ["Morocco"],
-    "coords": [31.79, -7.09],
+    "countries": [
+      "Morocco"
+    ],
+    "coords": [
+      31.79,
+      -7.09
+    ],
     "note": "Marrakech, the Sahara, and a High Atlas trek.",
-    "activities": ["Marrakech medina", "Sahara desert nights", "High Atlas trek", "Fes", "Chefchaouen"],
+    "activities": [
+      "Marrakech medina",
+      "Sahara desert nights",
+      "High Atlas trek",
+      "Fes",
+      "Chefchaouen"
+    ],
     "bestTime": "Oct–Nov or Mar–Apr for mild desert temperatures",
     "heroPhoto": "travel/morocco-2039/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/14VuM_mnyFEBnbC6ngIQekdLyg9ihxIhUa-QywGc1uag/edit?usp=sharing"
   },
   {
     "slug": "greece-2040",
@@ -332,14 +560,26 @@
     "months": "Jun",
     "intensity": 1,
     "days": 14,
-    "countries": ["Greece"],
-    "coords": [37.5, 24.5],
+    "countries": [
+      "Greece"
+    ],
+    "coords": [
+      37.5,
+      24.5
+    ],
     "note": "Athens, then island hopping through the Cyclades.",
-    "activities": ["Athens Acropolis", "Santorini", "Naxos", "Milos", "Aegean sailing"],
+    "activities": [
+      "Athens Acropolis",
+      "Santorini",
+      "Naxos",
+      "Milos",
+      "Aegean sailing"
+    ],
     "bestTime": "Jun or Sep for warm seas and thinner crowds",
     "heroPhoto": "travel/greece-2040/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1GMBz5mrj-2laVfYlVpw1a5Xq9nFIaK6yDVoLgp_Piwk/edit?usp=sharing"
   },
   {
     "slug": "eastern-europe-2040",
@@ -350,14 +590,28 @@
     "months": "Sep",
     "intensity": 2,
     "days": 15,
-    "countries": ["Hungary", "Romania", "Poland"],
-    "coords": [48.0, 21.0],
+    "countries": [
+      "Hungary",
+      "Romania",
+      "Poland"
+    ],
+    "coords": [
+      48,
+      21
+    ],
     "note": "Budapest, Transylvania, and Kraków — Central Europe's old cities.",
-    "activities": ["Budapest baths", "Transylvania castles", "Kraków", "Carpathian Mountains", "Old town squares"],
+    "activities": [
+      "Budapest baths",
+      "Transylvania castles",
+      "Kraków",
+      "Carpathian Mountains",
+      "Old town squares"
+    ],
     "bestTime": "Sep for mild weather and autumn color",
     "heroPhoto": "travel/eastern-europe-2040/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1xEwfEJU5rBk8JdrKDWfuQ31Ygx0RsBbUrkP6n4uZsVs/edit?usp=sharing"
   },
   {
     "slug": "antarctica-2042",
@@ -368,14 +622,26 @@
     "months": "Dec",
     "intensity": 3,
     "days": 14,
-    "countries": ["Antarctica"],
-    "coords": [-75.0, 0.0],
+    "countries": [
+      "Antarctica"
+    ],
+    "coords": [
+      -75,
+      0
+    ],
     "note": "An expedition cruise from Ushuaia across the Drake Passage to the seventh continent.",
-    "activities": ["Drake Passage crossing", "Zodiac landings", "Penguin colonies", "Kayaking among icebergs", "Polar camping"],
+    "activities": [
+      "Drake Passage crossing",
+      "Zodiac landings",
+      "Penguin colonies",
+      "Kayaking among icebergs",
+      "Polar camping"
+    ],
     "bestTime": "Nov–Feb austral summer",
     "heroPhoto": "travel/antarctica-2042/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1Hs91KaakbUHOOXB4CUL0kVLel1y0cagBI9-KhXhI_7k/edit?usp=sharing"
   },
   {
     "slug": "greenland-2043",
@@ -386,14 +652,26 @@
     "months": "Aug",
     "intensity": 4,
     "days": 12,
-    "countries": ["Greenland"],
-    "coords": [71.7, -42.6],
+    "countries": [
+      "Greenland"
+    ],
+    "coords": [
+      71.7,
+      -42.6
+    ],
     "note": "Ilulissat's icefjord, Arctic hiking, and the vast ice sheet.",
-    "activities": ["Ilulissat Icefjord", "Disko Bay", "Arctic Circle Trail", "Ice sheet edge", "Inuit culture"],
+    "activities": [
+      "Ilulissat Icefjord",
+      "Disko Bay",
+      "Arctic Circle Trail",
+      "Ice sheet edge",
+      "Inuit culture"
+    ],
     "bestTime": "Jul–Aug for accessible trails and open water",
     "heroPhoto": "travel/greenland-2043/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1a61CLUWOJJx0qaEh7d286naCYa8MxRRU2sYx-wzp0Ag/edit?usp=sharing"
   },
   {
     "slug": "southwest-loop-2043",
@@ -404,14 +682,26 @@
     "months": "Oct",
     "intensity": 3,
     "days": 14,
-    "countries": ["United States"],
-    "coords": [36.5, -111.5],
+    "countries": [
+      "United States"
+    ],
+    "coords": [
+      36.5,
+      -111.5
+    ],
     "note": "A slower return to the red-rock country — Zion, Bryce, Arches, and the Grand Canyon.",
-    "activities": ["Zion", "Bryce Canyon", "Arches", "Grand Canyon", "Antelope Canyon"],
+    "activities": [
+      "Zion",
+      "Bryce Canyon",
+      "Arches",
+      "Grand Canyon",
+      "Antelope Canyon"
+    ],
     "bestTime": "Oct for cool desert days",
     "heroPhoto": "travel/southwest-loop-2043/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://drive.google.com/drive/folders/1awEZgBUAiRCwgXPE4xTuUbQyN8Hu7_2g"
   },
   {
     "slug": "pacific-northwest-loop-2044",
@@ -422,14 +712,26 @@
     "months": "Aug",
     "intensity": 3,
     "days": 12,
-    "countries": ["United States"],
-    "coords": [47.5, -121.5],
+    "countries": [
+      "United States"
+    ],
+    "coords": [
+      47.5,
+      -121.5
+    ],
     "note": "Olympic, Rainier, and the North Cascades — the wet green corner of the country.",
-    "activities": ["Olympic National Park", "Mount Rainier", "North Cascades", "Seattle", "Oregon coast"],
+    "activities": [
+      "Olympic National Park",
+      "Mount Rainier",
+      "North Cascades",
+      "Seattle",
+      "Oregon coast"
+    ],
     "bestTime": "Jul–Sep for the reliable dry window",
     "heroPhoto": "travel/pacific-northwest-loop-2044/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://drive.google.com/drive/folders/1W-ZrXkR6RliUTKCM5GIQOb5ETXRbyMPH"
   },
   {
     "slug": "dubai-2044",
@@ -440,14 +742,26 @@
     "months": "Nov",
     "intensity": 1,
     "days": 6,
-    "countries": ["United Arab Emirates"],
-    "coords": [25.2048, 55.2708],
+    "countries": [
+      "United Arab Emirates"
+    ],
+    "coords": [
+      25.2048,
+      55.2708
+    ],
     "note": "A short stopover — desert, skyline, and Gulf luxury.",
-    "activities": ["Burj Khalifa", "Desert safari", "Old Dubai souks", "Palm Jumeirah", "Abu Dhabi day trip"],
+    "activities": [
+      "Burj Khalifa",
+      "Desert safari",
+      "Old Dubai souks",
+      "Palm Jumeirah",
+      "Abu Dhabi day trip"
+    ],
     "bestTime": "Nov–Mar cooler season",
     "heroPhoto": "travel/dubai-2044/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1U--rPvDq8tfrvIwxazZDZI99QuJ0g1WO8AIQTtXPCM0/edit?usp=sharing"
   },
   {
     "slug": "new-zealand-2-2045",
@@ -458,14 +772,26 @@
     "months": "Feb",
     "intensity": 3,
     "days": 18,
-    "countries": ["New Zealand"],
-    "coords": [-41.5, 172.5],
+    "countries": [
+      "New Zealand"
+    ],
+    "coords": [
+      -41.5,
+      172.5
+    ],
     "note": "A return to the South Island for the great walks missed the first time.",
-    "activities": ["Milford Track", "Fiordland", "Mount Cook", "Routeburn Track", "Queenstown"],
+    "activities": [
+      "Milford Track",
+      "Fiordland",
+      "Mount Cook",
+      "Routeburn Track",
+      "Queenstown"
+    ],
     "bestTime": "Dec–Mar for the NZ summer great-walks season",
     "heroPhoto": "travel/new-zealand-2-2045/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/12zU27bzfI6hvh270A4rU_oBJx9zomFexmBxLxAII1dg/edit?usp=sharing"
   },
   {
     "slug": "lapland-aurora-2045",
@@ -476,14 +802,27 @@
     "months": "Feb",
     "intensity": 2,
     "days": 8,
-    "countries": ["Finland", "Sweden"],
-    "coords": [68.4, 23.6],
+    "countries": [
+      "Finland",
+      "Sweden"
+    ],
+    "coords": [
+      68.4,
+      23.6
+    ],
     "note": "Arctic winter — northern lights, glass igloos, and husky sledding.",
-    "activities": ["Northern lights", "Glass igloo stay", "Husky sledding", "Icehotel", "Reindeer safari"],
+    "activities": [
+      "Northern lights",
+      "Glass igloo stay",
+      "Husky sledding",
+      "Icehotel",
+      "Reindeer safari"
+    ],
     "bestTime": "Dec–Mar for aurora and snow",
     "heroPhoto": "travel/lapland-aurora-2045/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1nx_qgJ9TzNurMz6QGgACaZVs7FikBIxDcdYQqq9LEdk/edit?usp=sharing"
   },
   {
     "slug": "northern-rockies-loop-2047",
@@ -494,14 +833,26 @@
     "months": "Jul",
     "intensity": 3,
     "days": 13,
-    "countries": ["United States"],
-    "coords": [45.6, -110.5],
+    "countries": [
+      "United States"
+    ],
+    "coords": [
+      45.6,
+      -110.5
+    ],
     "note": "Glacier, Yellowstone, and the Tetons — the crown of the American Rockies.",
-    "activities": ["Glacier National Park", "Going-to-the-Sun Road", "Yellowstone", "Grand Teton", "Wildlife watching"],
+    "activities": [
+      "Glacier National Park",
+      "Going-to-the-Sun Road",
+      "Yellowstone",
+      "Grand Teton",
+      "Wildlife watching"
+    ],
     "bestTime": "Jul–Aug when high passes are open",
     "heroPhoto": "travel/northern-rockies-loop-2047/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://drive.google.com/drive/folders/12VhwyREsc7Bh8lE0rG2Ep_deheaib-4x"
   },
   {
     "slug": "california-coast-loop-2047",
@@ -512,14 +863,26 @@
     "months": "Sep",
     "intensity": 2,
     "days": 11,
-    "countries": ["United States"],
-    "coords": [36.3, -121.8],
+    "countries": [
+      "United States"
+    ],
+    "coords": [
+      36.3,
+      -121.8
+    ],
     "note": "PCH from Big Sur to the redwoods, with a Yosemite detour.",
-    "activities": ["Big Sur", "Yosemite", "Redwoods", "Pacific Coast Highway", "San Francisco"],
+    "activities": [
+      "Big Sur",
+      "Yosemite",
+      "Redwoods",
+      "Pacific Coast Highway",
+      "San Francisco"
+    ],
     "bestTime": "Sep–Oct for clear coastal skies",
     "heroPhoto": "travel/california-coast-loop-2047/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://drive.google.com/drive/folders/1aHz-6jPdfCrmPn4_B28rQ4_33n2TIStJ"
   },
   {
     "slug": "deep-south-loop-2048",
@@ -530,14 +893,26 @@
     "months": "Mar",
     "intensity": 1,
     "days": 12,
-    "countries": ["United States"],
-    "coords": [31.0, -90.0],
+    "countries": [
+      "United States"
+    ],
+    "coords": [
+      31,
+      -90
+    ],
     "note": "Music, food, and history through New Orleans, Nashville, and Savannah.",
-    "activities": ["New Orleans", "Nashville", "Savannah", "Memphis BBQ", "Gulf Coast"],
+    "activities": [
+      "New Orleans",
+      "Nashville",
+      "Savannah",
+      "Memphis BBQ",
+      "Gulf Coast"
+    ],
     "bestTime": "Mar–Apr before summer humidity",
     "heroPhoto": "travel/deep-south-loop-2048/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://drive.google.com/drive/folders/1IggF6tepPeOZSzj8mJbbU8bwlQ3lUCct"
   },
   {
     "slug": "west-palm-beach-2048",
@@ -548,14 +923,26 @@
     "months": "Dec",
     "intensity": 1,
     "days": 7,
-    "countries": ["United States"],
-    "coords": [26.7153, -80.0534],
+    "countries": [
+      "United States"
+    ],
+    "coords": [
+      26.7153,
+      -80.0534
+    ],
     "note": "A warm winter break on the Florida coast.",
-    "activities": ["Beaches", "Everglades day trip", "Palm Beach", "Snorkeling", "Winter sun"],
+    "activities": [
+      "Beaches",
+      "Everglades day trip",
+      "Palm Beach",
+      "Snorkeling",
+      "Winter sun"
+    ],
     "bestTime": "Dec–Apr for dry warm weather",
     "heroPhoto": "travel/west-palm-beach-2048/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1x7KrmutLp7KQbQNWKbtuhwv0u0vgkPAYakOX5oZBcrQ/edit?usp=sharing"
   },
   {
     "slug": "viking-cruise-2049",
@@ -566,14 +953,28 @@
     "months": "May",
     "intensity": 1,
     "days": 15,
-    "countries": ["Netherlands", "Germany", "Hungary"],
-    "coords": [55.0, 12.0],
+    "countries": [
+      "Netherlands",
+      "Germany",
+      "Hungary"
+    ],
+    "coords": [
+      55,
+      12
+    ],
     "note": "A slower way to see Europe — a river or ocean cruise through the classic capitals.",
-    "activities": ["Rhine river cruise", "European capitals", "Guided city tours", "Onboard relaxation", "Scenic sailing"],
+    "activities": [
+      "Rhine river cruise",
+      "European capitals",
+      "Guided city tours",
+      "Onboard relaxation",
+      "Scenic sailing"
+    ],
     "bestTime": "May–Sep cruise season",
     "heroPhoto": "travel/viking-cruise-2049/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/12Y_PxJSqtchABAkJx5TzsmrKxaLgRxAkjJRZ984XfIo/edit?usp=sharing"
   },
   {
     "slug": "oceania-cruises-2050",
@@ -584,14 +985,27 @@
     "months": "Mar",
     "intensity": 1,
     "days": 16,
-    "countries": ["Fiji", "French Polynesia"],
-    "coords": [-17.7, 168.3],
+    "countries": [
+      "Fiji",
+      "French Polynesia"
+    ],
+    "coords": [
+      -17.7,
+      168.3
+    ],
     "note": "South Pacific island hopping by ship — Fiji, Tahiti, and beyond.",
-    "activities": ["South Pacific islands", "Tahiti", "Bora Bora", "Snorkeling", "Island culture"],
+    "activities": [
+      "South Pacific islands",
+      "Tahiti",
+      "Bora Bora",
+      "Snorkeling",
+      "Island culture"
+    ],
     "bestTime": "May–Oct dry season",
     "heroPhoto": "travel/oceania-cruises-2050/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/14vrmB6jNRogkRjldXjdw7l17RHLu2LVzOz463mLITe8/edit?usp=sharing"
   },
   {
     "slug": "singapore-2052",
@@ -602,14 +1016,26 @@
     "months": "Jul",
     "intensity": 1,
     "days": 6,
-    "countries": ["Singapore"],
-    "coords": [1.3521, 103.8198],
+    "countries": [
+      "Singapore"
+    ],
+    "coords": [
+      1.3521,
+      103.8198
+    ],
     "note": "A dedicated return — food, gardens, and the future-city architecture.",
-    "activities": ["Gardens by the Bay", "Hawker food tour", "Marina Bay", "Sentosa", "Botanic Gardens"],
+    "activities": [
+      "Gardens by the Bay",
+      "Hawker food tour",
+      "Marina Bay",
+      "Sentosa",
+      "Botanic Gardens"
+    ],
     "bestTime": "Feb–Apr for the driest months",
     "heroPhoto": "travel/singapore-2052/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1VQdkqv23r238G0YGD4Sq_rnZ6wglWdpKZ3262HElAg4/edit?usp=sharing"
   },
   {
     "slug": "italy-revisit-2053",
@@ -620,14 +1046,26 @@
     "months": "Sep",
     "intensity": 2,
     "days": 12,
-    "countries": ["Italy"],
-    "coords": [45.9, 10.5],
+    "countries": [
+      "Italy"
+    ],
+    "coords": [
+      45.9,
+      10.5
+    ],
     "note": "Back to northern Italy — the Dolomites' peaks and Lake Como's shores.",
-    "activities": ["Dolomites", "Lake Como", "Alpine day hikes", "Bellagio", "Northern Italian cuisine"],
+    "activities": [
+      "Dolomites",
+      "Lake Como",
+      "Alpine day hikes",
+      "Bellagio",
+      "Northern Italian cuisine"
+    ],
     "bestTime": "Sep for crisp mountain weather",
     "heroPhoto": "travel/italy-revisit-2053/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1g2fVIWmxRYgm3bREcACijbTN9ZYFiVoymtzmVg9xTYQ/edit?usp=sharing"
   },
   {
     "slug": "banff-revisit-2054",
@@ -638,14 +1076,26 @@
     "months": "Sep",
     "intensity": 2,
     "days": 10,
-    "countries": ["Canada"],
-    "coords": [51.4968, -115.9281],
+    "countries": [
+      "Canada"
+    ],
+    "coords": [
+      51.4968,
+      -115.9281
+    ],
     "note": "A return to Banff and Jasper — the Icefields Parkway in autumn.",
-    "activities": ["Lake Louise", "Moraine Lake", "Icefields Parkway", "Jasper", "Larch season hikes"],
+    "activities": [
+      "Lake Louise",
+      "Moraine Lake",
+      "Icefields Parkway",
+      "Jasper",
+      "Larch season hikes"
+    ],
     "bestTime": "Sep for golden larches and thin crowds",
     "heroPhoto": "travel/banff-revisit-2054/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1iq1nN_-VnbbEJLYSROs81I2oglto-YbVcfWyVhjKZe4/edit?usp=sharing"
   },
   {
     "slug": "japan-revisit-2055",
@@ -656,14 +1106,26 @@
     "months": "Apr",
     "intensity": 1,
     "days": 14,
-    "countries": ["Japan"],
-    "coords": [35.0, 135.0],
+    "countries": [
+      "Japan"
+    ],
+    "coords": [
+      35,
+      135
+    ],
     "note": "The bookend trip — Japan again, this time for sakura season.",
-    "activities": ["Cherry blossoms (sakura)", "Kyoto in spring", "Tokyo", "Hanami picnics", "Onsen towns"],
+    "activities": [
+      "Cherry blossoms (sakura)",
+      "Kyoto in spring",
+      "Tokyo",
+      "Hanami picnics",
+      "Onsen towns"
+    ],
     "bestTime": "Late Mar–early Apr for peak sakura",
     "heroPhoto": "travel/japan-revisit-2055/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1aT3kbyL19qvy96y72j6zTs1WVQqXlxtTC84UZ2bJcMk/edit?usp=sharing"
   },
   {
     "slug": "na-road-trip-2026",
@@ -674,8 +1136,14 @@
     "months": "2026",
     "intensity": 2,
     "days": 105,
-    "countries": ["United States", "Canada"],
-    "coords": [39.5, -98.35],
+    "countries": [
+      "United States",
+      "Canada"
+    ],
+    "coords": [
+      39.5,
+      -98.35
+    ],
     "note": "15,890 miles. 68 stops. 22 national parks. 9 permitted areas. 2 countries. 90–120 days on the road. The trip that started everything — a dream from college after reading Vagabonding by Rolf Potts, finally executed.",
     "activities": [
       "22 national parks",
@@ -693,6 +1161,7 @@
     "easterEggNote": "This trip has a full interactive 68-stop map — explore every stop.",
     "heroPhoto": "travel/na-road-trip-2026/hero",
     "photoCount": 0,
-    "featuredPhotos": []
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/spreadsheets/d/1uwrzmrQI8te-6ts9wagURRjzZee79p_GuMMlg6--8qM/edit?usp=sharing"
   }
 ]

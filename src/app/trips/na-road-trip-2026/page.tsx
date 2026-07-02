@@ -174,11 +174,12 @@ export default function NaRoadTripPage() {
             </a>
 
             <a
-              href="#"
-              className="block rounded-2xl border border-dashed border-[var(--border)] bg-[var(--surface)] p-5 text-sm text-[var(--accent)]"
+              href="https://docs.google.com/spreadsheets/d/1uwrzmrQI8te-6ts9wagURRjzZee79p_GuMMlg6--8qM/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 text-sm text-[var(--accent)] transition-colors hover:border-[var(--accent)]"
             >
-              Planning folder →{' '}
-              <span className="text-[var(--text-secondary)]">(add link)</span>
+              Planning doc →
             </a>
           </aside>
         </div>

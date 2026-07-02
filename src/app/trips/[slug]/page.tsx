@@ -6,7 +6,7 @@ import { getPostsForTrip } from '@/lib/mdx'
 import { REGION_LABELS } from '@/lib/regions'
 import { getCloudinaryUrl } from '@/lib/cloudinary'
 import { Stars, RegionPill, StatusBadge } from '@/components/ui'
-import { LocatorMapClient } from '@/components/map/MapLoaders'
+import GoogleMapEmbed from '@/components/map/GoogleMapEmbed'
 
 // The NA road trip has its own dedicated route; exclude it here.
 export function generateStaticParams() {
@@ -60,6 +60,11 @@ export default function TripPage({ params }: { params: { slug: string } }) {
           {trip.year} · {trip.months} · {trip.days} days · {trip.countries.join(', ')}
         </div>
       </header>
+
+      {/* Full-width map */}
+      <div className="mt-8 h-[340px] overflow-hidden rounded-2xl border border-[var(--border)] md:h-[440px]">
+        <GoogleMapEmbed coords={trip.coords} name={trip.name} />
+      </div>
 
       {/* Body */}
       <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-3">
@@ -117,14 +122,6 @@ export default function TripPage({ params }: { params: { slug: string } }) {
 
         {/* Sidebar */}
         <aside className="space-y-5">
-          <div className="h-64 overflow-hidden rounded-2xl border border-[var(--border)]">
-            <LocatorMapClient
-              coords={trip.coords}
-              name={trip.name}
-              status={trip.status}
-            />
-          </div>
-
           <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 text-sm">
             <h3 className="mb-3 font-display text-lg font-semibold">
               Quick stats
@@ -155,12 +152,16 @@ export default function TripPage({ params }: { params: { slug: string } }) {
             </dl>
           </div>
 
-          <a
-            href="#"
-            className="block rounded-2xl border border-dashed border-[var(--border)] bg-[var(--surface)] p-5 text-sm text-[var(--accent)]"
-          >
-            Planning doc → <span className="text-[var(--text-secondary)]">(add link)</span>
-          </a>
+          {trip.planningDoc && (
+            <a
+              href={trip.planningDoc}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 text-sm text-[var(--accent)] transition-colors hover:border-[var(--accent)]"
+            >
+              Planning doc →
+            </a>
+          )}
         </aside>
       </div>
     </div>

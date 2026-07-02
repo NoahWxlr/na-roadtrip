@@ -29,6 +29,8 @@ export interface Trip {
   heroPhoto?: string
   photoCount?: number
   featuredPhotos?: string[]
+  /** Link to the trip's Google Doc / planning folder (view-only for visitors). */
+  planningDoc?: string
 }
 
 export interface PlanYear {
