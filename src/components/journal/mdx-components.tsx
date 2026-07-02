@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import FullBleedImage from './FullBleedImage'
 import WideImage from './WideImage'
-import PhotoGrid from './PhotoGrid'
+import PhotoGrid, { GridImage } from './PhotoGrid'
 import PullQuote from './PullQuote'
 import TripStats from './TripStats'
 
@@ -12,6 +12,7 @@ export const mdxComponents = {
   FullBleedImage,
   WideImage,
   PhotoGrid,
+  GridImage,
   PullQuote,
   TripStats,
   a: (props: React.ComponentProps<'a'>) => {
