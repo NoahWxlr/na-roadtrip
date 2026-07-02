@@ -1,0 +1,40 @@
+---
+title: "A test entry: how this journal works"
+date: "2026-01-01"
+tripSlug: "japan-singapore-2026"
+region: "asia"
+excerpt: "This is a placeholder showing the format for journal entries. Replace with real content after travel."
+heroPhoto: "travel/japan-singapore-2026/hero"
+---
+
+This is where the journal entry goes. Write in plain markdown, and reach for the
+custom components below when a moment deserves more than a paragraph.
+
+## What happened
+
+Paragraph of prose here. The trip was long in the planning and short in the
+living, the way the good ones always are.
+
+<PullQuote>Some sentences want to be bigger than the paragraph around them.</PullQuote>
+
+## What I learned
+
+Another section. Journal entries can be as long or short as needed.
+
+<FullBleed src="travel/japan-singapore-2026/hero" alt="Fall foliage in Kyoto" caption="Koyo season in the hills above Kyoto" location="Kyoto, Japan" />
+
+Images can also sit two or three across:
+
+<PhotoGrid images={[
+  { src: "travel/japan-singapore-2026/tokyo-shibuya", alt: "Shibuya crossing", caption: "Shibuya" },
+  { src: "travel/japan-singapore-2026/kyoto-fushimi", alt: "Fushimi Inari", caption: "Fushimi Inari" }
+]} />
+
+> Blockquotes render with a left accent border for pull quotes.
+
+And a stat box pulled straight from the trip data:
+
+<TripStats slug="japan-singapore-2026" />
+
+Entries are linked to a specific trip via the `tripSlug` frontmatter field,
+so they automatically appear on that trip's detail page.

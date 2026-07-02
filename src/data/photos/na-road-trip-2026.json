@@ -1,0 +1,26 @@
+[
+  {
+    "id": "travel/na-road-trip-2026/acadia",
+    "caption": "First sunrise in the US from Cadillac Mountain",
+    "location": "Acadia National Park, Maine",
+    "date": "2026-05-20",
+    "featured": true,
+    "tags": ["sunrise", "coast", "np"]
+  },
+  {
+    "id": "travel/na-road-trip-2026/moraine-lake",
+    "caption": "Moraine Lake at first light",
+    "location": "Banff National Park, Canada",
+    "date": "2026-07-02",
+    "featured": true,
+    "tags": ["lake", "mountains", "np"]
+  },
+  {
+    "id": "travel/na-road-trip-2026/zion-narrows",
+    "caption": "Wading up the Narrows",
+    "location": "Zion National Park, Utah",
+    "date": "2026-09-14",
+    "featured": false,
+    "tags": ["canyon", "water", "np"]
+  }
+]

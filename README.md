@@ -1,42 +1,61 @@
-# 🗺 NA Road Trip
+# 🌍 Noah travels
 
-Personal road trip reference site for a North America road trip — 52 stops, ~15,890 miles across the US, Canada, and back.
+Lifetime travel planner, photography archive, and long-form journal — a 30-year
+plan, an interactive world map, and a magazine-style travel blog.
 
-Built as a pure static site (HTML/CSS/JS, no build step) hosted on Vercel.
-
-## Features
-
-- **Optimized Route** — 68 stops in logical geographic order, eliminating backtracking
-- **Interactive Filters** — filter by National Parks, Cities, Climbs, or Canada
-- **Search** — fuzzy search across all stops
-- **Permit Tracker** — all required permits with lottery links, costs, timing, and competition level
-- **Recommendations** — additional spots not in the original plan, ranked by trip impact
-- **Phase Overview** — 6 geographic phases with timing recommendations
+Rebuilt from the original NA Road Trip static site (now preserved as an easter
+egg at `/trips/na-road-trip-2026`).
 
 ## Stack
 
-- Plain HTML, CSS, JavaScript — no framework, no build step
-- Google Fonts (Playfair Display + DM Sans)
-- Deployed on Vercel (free tier)
+- **Next.js 14** (App Router) + **TypeScript**
+- **Tailwind CSS** with a two-mode token system (dark for map/plan, light editorial for journal/photos)
+- **Leaflet.js** + CartoDB Dark Matter tiles for all maps
+- **MDX** journal via `next-mdx-remote` (no CMS) — content in `content/journal/`
+- **Cloudinary** (`next-cloudinary`) for the photography system
+- All trip/plan data in JSON under `src/data/` — no database
+
+## Routes
+
+| Route | Theme | Description |
+|-------|-------|-------------|
+| `/` | dark | Home — hero, stats, latest journal entry, origin story |
+| `/plan` | dark | 30-year interactive timeline |
+| `/map` | dark | World map, color-coded by status |
+| `/journal`, `/journal/[slug]` | light | Journal index + magazine article layout |
+| `/trips`, `/trips/[slug]` | light | Trip directory + detail with locator map |
+| `/trips/na-road-trip-2026` | dark | The 68-stop easter-egg road-trip map |
+| `/photos`, `/photos/[slug]` | light | Photography portfolio + trip galleries |
+| `/about` | light/dark | About + gear + origin story |
+| `/roadtrip` | — | Redirects to `/trips/na-road-trip-2026` |
 
 ## Development
 
 ```bash
-# Clone the repo
-git clone https://github.com/noahwxlr/na-roadtrip.git
-cd na-roadtrip
-
-# Open locally — just open index.html in a browser
-open index.html
-
-# Or use a local dev server
-npx serve .
+npm install
+cp .env.local.example .env.local   # add your Cloudinary cloud name (optional)
+npm run dev                         # http://localhost:3000
+npm run build                       # production build (statically generates all pages)
 ```
+
+## Data
+
+- `src/data/trips.json` — 37 trips (region, status, coords, intensity, notes…)
+- `src/data/plan.json` — the year-by-year 30-year plan
+- `src/data/na-roadtrip-stops.json` — the 68 road-trip stops (generated from the
+  legacy site via `npm run convert:stops`)
+- `src/data/photos/[slug].json` — per-trip photo metadata (Cloudinary public IDs)
+
+## Legacy
+
+The original static site lives under `public/roadtrip-legacy/` for reference and
+is linked from the road-trip page as "Original trip app →".
 
 ## Deployment
 
-Deployed automatically to Vercel on every push to `main`. No build configuration needed — Vercel serves the static files directly.
+Auto-deploys to Vercel from `main`. Set `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` in the
+Vercel project's environment variables to enable real photography.
 
 ## License
 
-MIT — open source, do whatever you want with it.
+MIT

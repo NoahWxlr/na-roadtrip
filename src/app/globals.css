@@ -1,0 +1,85 @@
+@import 'leaflet/dist/leaflet.css';
+@import 'highlight.js/styles/github-dark.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   Token system — two modes sharing one component tree (spec §7.3).
+   Dark mode (map/plan) is the default; [data-theme="light"] swaps the tokens
+   for the journal/photography sections.
+--------------------------------------------------------------------------- */
+:root,
+[data-theme='dark'] {
+  --bg: #0d0d0f;
+  --surface: #16161a;
+  --border: #2a2a2e;
+  --text-primary: #f0ede8;
+  --text-secondary: #9a9a9f;
+  --accent: #e8c97e;
+}
+
+[data-theme='light'] {
+  --bg: #faf9f7;
+  --surface: #ffffff;
+  --border: #e8e5e0;
+  --text-primary: #1a1a1c;
+  --text-secondary: #6b6b70;
+  --accent: #c4973a;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body), system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Editorial drop cap for journal articles */
+.dropcap::first-letter {
+  float: left;
+  font-family: var(--font-display), serif;
+  font-size: 4.2rem;
+  line-height: 0.8;
+  padding: 0.1em 0.12em 0 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Full-bleed breakout used by MDX images inside the prose column */
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+/* Leaflet popups restyled to match the dark map aesthetic */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #16161a;
+  color: #f0ede8;
+  border: 1px solid #2a2a2e;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 10px;
+}
+.leaflet-container a.leaflet-popup-close-button {
+  color: #9a9a9f;
+}
+.leaflet-popup-content {
+  margin: 12px 14px;
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Custom divIcon markers */
+.trip-marker {
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.35);
+}
