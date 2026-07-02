@@ -18,15 +18,15 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://na-roadtrip.vercel.app'),
+  metadataBase: new URL('https://milesandmeaning.vercel.app'),
   title: {
-    template: '%s | Noah travels',
-    default: 'Noah travels — a lifetime of exploration',
+    template: '%s | Miles and Meaning',
+    default: 'Miles and Meaning — A lifetime of travel stories',
   },
   description:
     'A 30-year travel plan, photography archive, and long-form journal documenting the world one trip at a time.',
   openGraph: {
-    siteName: 'Noah travels',
+    siteName: 'Miles and Meaning',
     type: 'website',
     images: [{ url: '/og-default.jpg', width: 1200, height: 630 }],
   },

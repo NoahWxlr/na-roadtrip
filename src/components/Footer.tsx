@@ -14,7 +14,7 @@ export default function Footer() {
     <footer className="border-t border-[var(--border)] bg-[var(--bg)] text-[var(--text-secondary)]">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-5 py-8 text-sm md:flex-row md:justify-between">
         <p className="text-center md:text-left">
-          Noah&apos;s world · Built with Next.js + Leaflet
+          Miles and Meaning · A lifetime of travel stories
         </p>
 
         <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2">

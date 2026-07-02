@@ -42,7 +42,7 @@ export default function Nav() {
           <span aria-hidden className="text-[var(--accent)]">
             ◍
           </span>
-          Noah travels
+          Miles and Meaning
         </Link>
 
         {/* Desktop */}

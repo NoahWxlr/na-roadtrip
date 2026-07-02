@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getTripSlugs } from '@/lib/trips'
 import { getPostSlugs } from '@/lib/mdx'
 
-const BASE = 'https://na-roadtrip.vercel.app'
+const BASE = 'https://milesandmeaning.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ['', '/plan', '/map', '/journal', '/trips', '/photos', '/about']

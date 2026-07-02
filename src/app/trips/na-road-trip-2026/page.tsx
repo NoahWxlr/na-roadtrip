@@ -165,7 +165,7 @@ export default function NaRoadTripPage() {
             </div>
 
             <a
-              href="https://na-roadtrip.vercel.app/roadtrip-legacy/index.html"
+              href="/roadtrip-legacy/index.html"
               target="_blank"
               rel="noopener noreferrer"
               className="block rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 text-sm text-[var(--accent)]"
