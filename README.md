@@ -1,4 +1,4 @@
-# 🌍 Noah travels
+# 🌍 Miles and Meaning
 
 Lifetime travel planner, photography archive, and long-form journal — a 30-year
 plan, an interactive world map, and a magazine-style travel blog.
