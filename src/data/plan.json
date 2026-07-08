@@ -1,8 +1,8 @@
 [
   { "year": 2026, "age": 33, "gap": false, "trips": ["japan-singapore-2026", "na-road-trip-2026"] },
-  { "year": 2027, "age": 34, "gap": false, "trips": ["three-passes-nepal-2027"] },
-  { "year": 2028, "age": 35, "gap": false, "trips": ["peru-huayhuash-2028", "new-england-loop-2028"] },
-  { "year": 2029, "age": 36, "gap": false, "trips": ["chile-wtrek-2029"] },
+  { "year": 2027, "age": 34, "gap": false, "trips": ["peru-huayhuash-2027", "new-england-loop-2027"] },
+  { "year": 2028, "age": 35, "gap": false, "trips": ["chile-wtrek-2028"] },
+  { "year": 2029, "age": 36, "gap": false, "trips": ["three-passes-nepal-2029"] },
   { "year": 2030, "age": 37, "gap": true, "gapReason": "Gap year — relocation decision, new role ramp-up, Alphalog growth phase" },
   { "year": 2031, "age": 38, "gap": false, "trips": ["traumpfad-2031"] },
   { "year": 2032, "age": 39, "gap": false, "trips": ["switzerland-haute-route-2032", "argentina-2032"] },

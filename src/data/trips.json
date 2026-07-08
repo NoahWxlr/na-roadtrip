@@ -32,41 +32,11 @@
     "planningDoc": "https://docs.google.com/document/d/1aT3kbyL19qvy96y72j6zTs1WVQqXlxtTC84UZ2bJcMk/edit?usp=sharing"
   },
   {
-    "slug": "three-passes-nepal-2027",
-    "name": "Three Passes Trek, Nepal",
-    "region": "trek",
-    "status": "planned",
-    "year": 2027,
-    "months": "Nov",
-    "intensity": 5,
-    "days": 21,
-    "countries": [
-      "Nepal"
-    ],
-    "coords": [
-      27.9881,
-      86.925
-    ],
-    "note": "The Everest region's high route — Kongma La, Cho La, and Renjo La passes, all above 5,000m. Acclimatization is everything.",
-    "activities": [
-      "Kongma La, Cho La, Renjo La passes",
-      "Everest Base Camp",
-      "Gokyo Lakes",
-      "Namche Bazaar",
-      "Kala Patthar sunrise"
-    ],
-    "bestTime": "Late Oct–Nov for clear post-monsoon skies and stable weather",
-    "heroPhoto": "travel/three-passes-nepal-2027/hero",
-    "photoCount": 0,
-    "featuredPhotos": [],
-    "planningDoc": "https://docs.google.com/document/d/1RX7dAS1KDl4IjKZ5Bg4hA6sIOsaSf2dh5t4ZrqsHUOU/edit?usp=sharing"
-  },
-  {
-    "slug": "peru-huayhuash-2028",
+    "slug": "peru-huayhuash-2027",
     "name": "Peru + Huayhuash Circuit",
     "region": "south_am",
     "status": "planned",
-    "year": 2028,
+    "year": 2027,
     "months": "Jun–Jul",
     "intensity": 5,
     "days": 18,
@@ -86,17 +56,17 @@
       "Lima food scene"
     ],
     "bestTime": "Jun–Aug dry season for the high Andes",
-    "heroPhoto": "travel/peru-huayhuash-2028/hero",
+    "heroPhoto": "travel/peru-huayhuash-2027/hero",
     "photoCount": 0,
     "featuredPhotos": [],
     "planningDoc": "https://docs.google.com/document/d/1Csdbz4t0JFI17NOhLC3ppAS8T_D_EdAVrrZL2AtTpiQ/edit?usp=sharing"
   },
   {
-    "slug": "new-england-loop-2028",
+    "slug": "new-england-loop-2027",
     "name": "New England Loop",
     "region": "na",
     "status": "planned",
-    "year": 2028,
+    "year": 2027,
     "months": "Oct",
     "intensity": 2,
     "days": 12,
@@ -116,17 +86,17 @@
       "Coastal Maine seafood"
     ],
     "bestTime": "Early–mid October for peak foliage",
-    "heroPhoto": "travel/new-england-loop-2028/hero",
+    "heroPhoto": "travel/new-england-loop-2027/hero",
     "photoCount": 0,
     "featuredPhotos": [],
     "planningDoc": "https://docs.google.com/spreadsheets/d/1uwrzmrQI8te-6ts9wagURRjzZee79p_GuMMlg6--8qM/edit?usp=sharing"
   },
   {
-    "slug": "chile-wtrek-2029",
+    "slug": "chile-wtrek-2028",
     "name": "Chile + W-Trek (Patagonia)",
     "region": "south_am",
     "status": "planned",
-    "year": 2029,
+    "year": 2028,
     "months": "Dec–Jan",
     "intensity": 4,
     "days": 16,
@@ -146,10 +116,40 @@
       "Santiago wine country"
     ],
     "bestTime": "Dec–Feb for the Patagonian summer",
-    "heroPhoto": "travel/chile-wtrek-2029/hero",
+    "heroPhoto": "travel/chile-wtrek-2028/hero",
     "photoCount": 0,
     "featuredPhotos": [],
     "planningDoc": "https://docs.google.com/document/d/1USRhyCjxe57vGSsNb6-_aXqwbQ8kVDPiSdYuKFl4O5s/edit?usp=sharing"
+  },
+  {
+    "slug": "three-passes-nepal-2029",
+    "name": "Three Passes Trek, Nepal",
+    "region": "trek",
+    "status": "planned",
+    "year": 2029,
+    "months": "Nov",
+    "intensity": 5,
+    "days": 21,
+    "countries": [
+      "Nepal"
+    ],
+    "coords": [
+      27.9881,
+      86.925
+    ],
+    "note": "The Everest region's high route — Kongma La, Cho La, and Renjo La passes, all above 5,000m. Acclimatization is everything. Saved for after Peru and Chile to build high-altitude and multi-day trekking experience first.",
+    "activities": [
+      "Kongma La, Cho La, Renjo La passes",
+      "Everest Base Camp",
+      "Gokyo Lakes",
+      "Namche Bazaar",
+      "Kala Patthar sunrise"
+    ],
+    "bestTime": "Late Oct–Nov for clear post-monsoon skies and stable weather",
+    "heroPhoto": "travel/three-passes-nepal-2029/hero",
+    "photoCount": 0,
+    "featuredPhotos": [],
+    "planningDoc": "https://docs.google.com/document/d/1RX7dAS1KDl4IjKZ5Bg4hA6sIOsaSf2dh5t4ZrqsHUOU/edit?usp=sharing"
   },
   {
     "slug": "traumpfad-2031",
