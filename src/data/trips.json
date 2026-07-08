@@ -59,7 +59,111 @@
     "heroPhoto": "travel/peru-huayhuash-2027/hero",
     "photoCount": 0,
     "featuredPhotos": [],
-    "planningDoc": "https://docs.google.com/document/d/1Csdbz4t0JFI17NOhLC3ppAS8T_D_EdAVrrZL2AtTpiQ/edit?usp=sharing"
+    "planningDoc": "https://docs.google.com/document/d/1Csdbz4t0JFI17NOhLC3ppAS8T_D_EdAVrrZL2AtTpiQ/edit?usp=sharing",
+    "gearChecklist": [
+      {
+        "category": "Footwear",
+        "items": [
+          "Broken-in mid/high waterproof hiking boots",
+          "Camp shoes or sandals",
+          "Wool hiking socks (5–6 pairs)",
+          "Liner socks",
+          "Gaiters"
+        ]
+      },
+      {
+        "category": "Layers",
+        "items": [
+          "Merino base layers (top + bottom)",
+          "Insulated mid-layer (fleece or synthetic puffy)",
+          "Heavyweight down jacket (0°F / -18°C rated for high camps)",
+          "Waterproof/breathable shell jacket and pants",
+          "Insulated camp pants",
+          "Sun shirt, buff, sun hat, warm beanie",
+          "Liner gloves + insulated shell mitts"
+        ]
+      },
+      {
+        "category": "Sleep system",
+        "items": [
+          "4-season sleeping bag (rated to ~0°F given ~4,600m camps)",
+          "Sleeping bag liner for extra warmth",
+          "Inflatable sleeping pad, R-value 5+"
+        ]
+      },
+      {
+        "category": "Pack & carry",
+        "items": [
+          "30–35L daypack for trekking",
+          "Duffel bag for mule/porter transport",
+          "Dry bags / pack liner",
+          "Trekking poles"
+        ]
+      },
+      {
+        "category": "Altitude & health",
+        "items": [
+          "Diamox (consult a doctor before departure)",
+          "Pulse oximeter",
+          "Personal first-aid kit + electrolyte tabs",
+          "High-SPF sunscreen and lip balm",
+          "Category 4 glacier sunglasses"
+        ]
+      },
+      {
+        "category": "Navigation & safety",
+        "items": [
+          "Offline maps (Gaia GPS / Maps.me) downloaded in advance",
+          "Headlamp + spare batteries",
+          "Satellite communicator (Garmin inReach) — Huayhuash is remote",
+          "Water filter + chemical backup treatment",
+          "Insulated water bottles to prevent freezing"
+        ]
+      }
+    ],
+    "trainingPlan": [
+      {
+        "phase": "Base building",
+        "timeframe": "Jul–Sep 2026",
+        "focus": "Rebuild aerobic base and reintroduce structured strength work",
+        "details": [
+          "3x/week zone 2 cardio (bike or run)",
+          "2x/week full-body strength, shifting toward strength-endurance and posterior chain/leg work",
+          "1x/week weighted ruck, 3–5mi with a 15–20lb pack on flat terrain"
+        ]
+      },
+      {
+        "phase": "Century ride block",
+        "timeframe": "Oct–Dec 2026",
+        "focus": "Peak cycling volume — target a fall century as an aerobic milestone",
+        "details": [
+          "Progressive long Saturday rides building to 100mi",
+          "Continue weekly rucking, pack weight up to 25–30lb",
+          "Add stairs or incline treadmill sessions for vertical gain"
+        ]
+      },
+      {
+        "phase": "Trek-specific loading",
+        "timeframe": "Jan–Mar 2027",
+        "focus": "Heavy rucking and leg strength for sustained high-altitude days",
+        "details": [
+          "2x/week rucking, including one long ruck of 8–12mi with 30–35lb",
+          "Weighted step-ups, lunges, and single-leg strength work",
+          "Altitude simulation via stairmaster intervals; real elevation exposure if accessible",
+          "Maintain bike/run cardio base at reduced volume"
+        ]
+      },
+      {
+        "phase": "Peak & taper",
+        "timeframe": "Apr–Jun 2027",
+        "focus": "Simulate multi-day trekking and dial in gear before departure",
+        "details": [
+          "Back-to-back long rucks on consecutive days to simulate the circuit",
+          "Full gear shakedown hikes with trek-weight pack",
+          "Taper volume in the final 2 weeks before departure"
+        ]
+      }
+    ]
   },
   {
     "slug": "new-england-loop-2027",
@@ -119,7 +223,102 @@
     "heroPhoto": "travel/chile-wtrek-2028/hero",
     "photoCount": 0,
     "featuredPhotos": [],
-    "planningDoc": "https://docs.google.com/document/d/1USRhyCjxe57vGSsNb6-_aXqwbQ8kVDPiSdYuKFl4O5s/edit?usp=sharing"
+    "planningDoc": "https://docs.google.com/document/d/1USRhyCjxe57vGSsNb6-_aXqwbQ8kVDPiSdYuKFl4O5s/edit?usp=sharing",
+    "gearChecklist": [
+      {
+        "category": "Footwear",
+        "items": [
+          "Waterproof hiking boots",
+          "Camp shoes",
+          "Wool hiking socks",
+          "Gaiters for mud and scree"
+        ]
+      },
+      {
+        "category": "Layers",
+        "items": [
+          "Wind-resistant hardshell jacket — Patagonian wind is relentless",
+          "Rain pants",
+          "Insulated puffy jacket",
+          "Merino base layers",
+          "Fleece mid-layer",
+          "Warm hat, sun hat, buff",
+          "Wind-resistant gloves"
+        ]
+      },
+      {
+        "category": "Sleep system",
+        "items": [
+          "3-season sleeping bag + liner (lighter if refugio-only nights)",
+          "Sleeping pad for any camping nights"
+        ]
+      },
+      {
+        "category": "Pack & carry",
+        "items": [
+          "35–45L trekking pack",
+          "Pack rain cover",
+          "Trekking poles — wind gusts can knock you off balance"
+        ]
+      },
+      {
+        "category": "Health & comfort",
+        "items": [
+          "Sunscreen and lip balm (strong UV + wind chapping)",
+          "Blister kit",
+          "Earplugs for busy refugios",
+          "Quick-dry towel"
+        ]
+      },
+      {
+        "category": "Logistics",
+        "items": [
+          "Refugio/campsite reservations booked far in advance — the W-Trek sells out",
+          "Offline maps",
+          "Headlamp"
+        ]
+      }
+    ],
+    "trainingPlan": [
+      {
+        "phase": "Recovery & base rebuild",
+        "timeframe": "Jul–Aug 2027",
+        "focus": "Active recovery after Huayhuash before ramping back up",
+        "details": [
+          "Light cardio and mobility work, no heavy loading",
+          "Reassess what worked and what didn't from the Peru gear/training cycle"
+        ]
+      },
+      {
+        "phase": "Half Ironman build",
+        "timeframe": "Sep 2027–Jun 2028",
+        "focus": "Periodized swim/bike/run block leveraging the century ride base, targeting an early-summer 2028 race",
+        "details": [
+          "Dedicated swim technique work — likely the weakest discipline coming in",
+          "Structured bike and run progression building on existing cycling fitness",
+          "This block doubles as excellent aerobic conditioning for the W-Trek"
+        ]
+      },
+      {
+        "phase": "Patagonia-specific prep",
+        "timeframe": "Jul–Nov 2028",
+        "focus": "Wind, cold, and terrain-specific conditioning",
+        "details": [
+          "Weekly rucking with 25–30lb pack on varied terrain",
+          "Train in wind/rain where possible to condition for exposed ridgelines",
+          "Maintain strength work for stability on scree and river crossings"
+        ]
+      },
+      {
+        "phase": "Taper",
+        "timeframe": "Early Dec 2028",
+        "focus": "Final gear check and short shakedown hikes",
+        "details": [
+          "Test full rain/wind kit together, not just individual pieces",
+          "Taper volume in the final 1–2 weeks before departure"
+        ]
+      }
+    ]
   },
   {
     "slug": "three-passes-nepal-2029",
@@ -149,7 +348,109 @@
     "heroPhoto": "travel/three-passes-nepal-2029/hero",
     "photoCount": 0,
     "featuredPhotos": [],
-    "planningDoc": "https://docs.google.com/document/d/1RX7dAS1KDl4IjKZ5Bg4hA6sIOsaSf2dh5t4ZrqsHUOU/edit?usp=sharing"
+    "planningDoc": "https://docs.google.com/document/d/1RX7dAS1KDl4IjKZ5Bg4hA6sIOsaSf2dh5t4ZrqsHUOU/edit?usp=sharing",
+    "gearChecklist": [
+      {
+        "category": "Footwear",
+        "items": [
+          "Well broken-in insulated waterproof boots",
+          "Down booties or camp shoes for teahouses",
+          "Heavy wool socks + liner socks",
+          "Gaiters"
+        ]
+      },
+      {
+        "category": "Layers",
+        "items": [
+          "Expedition-weight down jacket (well below 0°F for 5,000m+ mornings)",
+          "Heavyweight base layers",
+          "Fleece or softshell mid-layer",
+          "Waterproof/breathable shell",
+          "Insulated pants",
+          "Down mittens + liner gloves",
+          "Warm beanie + buff",
+          "Category 4 glacier sunglasses — essential near Cho La and Renjo La snowfields"
+        ]
+      },
+      {
+        "category": "Sleep system",
+        "items": [
+          "4-season sleeping bag, rated to at least -20°F / -29°C (teahouses are unheated at altitude)",
+          "Sleeping bag liner",
+          "Inflatable sleeping pad (teahouse mattresses are thin)"
+        ]
+      },
+      {
+        "category": "Pack & carry",
+        "items": [
+          "40–50L trekking pack, or duffel + daypack if using a porter",
+          "Trekking poles — mandatory for the passes",
+          "Dry bags"
+        ]
+      },
+      {
+        "category": "Altitude & health",
+        "items": [
+          "Diamox",
+          "Pulse oximeter — check O2 daily",
+          "Comprehensive high-altitude first-aid kit",
+          "Water purification (SteriPen or filter — treat all teahouse water)",
+          "Electrolytes",
+          "Travel insurance with high-altitude helicopter evacuation coverage"
+        ]
+      },
+      {
+        "category": "Navigation & logistics",
+        "items": [
+          "Offline maps for the Everest region (Gaia GPS / Maps.me)",
+          "Headlamp + spare batteries kept in an inner pocket (cold drains them fast)",
+          "Power bank — teahouse outlets are limited and often paid",
+          "Cash — no ATMs past Namche Bazaar",
+          "Satellite communicator",
+          "Snacks/energy bars — teahouse food gets monotonous and pricey at altitude"
+        ]
+      }
+    ],
+    "trainingPlan": [
+      {
+        "phase": "Post-Chile base maintenance",
+        "timeframe": "Jan–Mar 2029",
+        "focus": "Hold aerobic and strength base gained from the Peru and Chile cycles",
+        "details": [
+          "Maintain 3x/week cardio and 2x/week strength through the off-season",
+          "Review lessons learned from Huayhuash and the W-Trek — this is the capstone trek"
+        ]
+      },
+      {
+        "phase": "Altitude-specific build",
+        "timeframe": "Apr–Jul 2029",
+        "focus": "Condition specifically for repeated passes above 5,000m",
+        "details": [
+          "High-elevation hiking where accessible (e.g. Colorado/Rockies 14ers) to bank real altitude exposure",
+          "Heavier weekly rucking, building toward 35–40lb",
+          "Stairmaster or incline intervals for lung capacity at altitude"
+        ]
+      },
+      {
+        "phase": "Peak volume",
+        "timeframe": "Aug–Oct 2029",
+        "focus": "Simulate the sustained multi-day, multi-pass demands of the route",
+        "details": [
+          "Back-to-back multi-day rucks at max training pack weight",
+          "Cold-weather layering dress rehearsals",
+          "Final gear shakedown using the exact kit for the trip"
+        ]
+      },
+      {
+        "phase": "Taper",
+        "timeframe": "Early Nov 2029",
+        "focus": "Rest and final preparation before departure",
+        "details": [
+          "Sharp reduction in training volume in the final 10–14 days",
+          "Confirm insurance, permits, and evacuation coverage are in order"
+        ]
+      }
+    ]
   },
   {
     "slug": "traumpfad-2031",

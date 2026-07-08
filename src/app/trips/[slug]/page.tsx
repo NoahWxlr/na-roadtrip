@@ -90,6 +90,60 @@ export default function TripPage({ params }: { params: { slug: string } }) {
             <p className="mt-3 text-[var(--text-secondary)]">{trip.bestTime}</p>
           </section>
 
+          {trip.trainingPlan && trip.trainingPlan.length > 0 && (
+            <section className="mt-8">
+              <h2 className="font-display text-2xl font-semibold">Training plan</h2>
+              <div className="mt-3 space-y-4">
+                {trip.trainingPlan.map((phase) => (
+                  <div
+                    key={phase.phase}
+                    className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4"
+                  >
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                      <h3 className="font-display text-lg font-semibold">
+                        {phase.phase}
+                      </h3>
+                      <span className="text-xs text-[var(--text-secondary)]">
+                        {phase.timeframe}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm text-[var(--text-secondary)]">
+                      {phase.focus}
+                    </p>
+                    <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--text-secondary)]">
+                      {phase.details.map((d) => (
+                        <li key={d}>{d}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {trip.gearChecklist && trip.gearChecklist.length > 0 && (
+            <section className="mt-8">
+              <h2 className="font-display text-2xl font-semibold">Gear checklist</h2>
+              <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {trip.gearChecklist.map((cat) => (
+                  <div
+                    key={cat.category}
+                    className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4"
+                  >
+                    <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-[var(--text-secondary)]">
+                      {cat.category}
+                    </h3>
+                    <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--text-secondary)]">
+                      {cat.items.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
           <section className="mt-8">
             <h2 className="font-display text-2xl font-semibold">From the journal</h2>
             {posts.length ? (
