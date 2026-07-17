@@ -32,11 +32,11 @@
     "planningDoc": "https://docs.google.com/document/d/1aT3kbyL19qvy96y72j6zTs1WVQqXlxtTC84UZ2bJcMk/edit?usp=sharing"
   },
   {
-    "slug": "peru-huayhuash-2027",
+    "slug": "peru-huayhuash-2031",
     "name": "Peru + Huayhuash Circuit",
     "region": "south_am",
     "status": "planned",
-    "year": 2027,
+    "year": 2031,
     "months": "Jun–Jul",
     "intensity": 5,
     "days": 18,
@@ -47,7 +47,7 @@
       -10.27,
       -76.9
     ],
-    "note": "The Cordillera Huayhuash circuit — one of the most beautiful and demanding treks on earth. Bookended by Cusco and Machu Picchu.",
+    "note": "The Cordillera Huayhuash circuit — one of the most beautiful and demanding treks on earth. Bookended by Cusco and Machu Picchu. The first fully self-supported camping trek, at 4,000–5,090 m.",
     "activities": [
       "Huayhuash Circuit",
       "Machu Picchu",
@@ -56,124 +56,126 @@
       "Lima food scene"
     ],
     "bestTime": "Jun–Aug dry season for the high Andes",
-    "heroPhoto": "travel/peru-huayhuash-2027/hero",
+    "heroPhoto": "travel/peru-huayhuash-2031/hero",
     "photoCount": 0,
     "featuredPhotos": [],
     "planningDoc": "https://docs.google.com/document/d/1Csdbz4t0JFI17NOhLC3ppAS8T_D_EdAVrrZL2AtTpiQ/edit?usp=sharing",
     "gearChecklist": [
       {
-        "category": "Footwear",
-        "items": [
-          "Broken-in mid/high waterproof hiking boots",
-          "Camp shoes or sandals",
-          "Wool hiking socks (5–6 pairs)",
-          "Liner socks",
-          "Gaiters"
-        ]
-      },
-      {
-        "category": "Layers",
-        "items": [
-          "Merino base layers (top + bottom)",
-          "Insulated mid-layer (fleece or synthetic puffy)",
-          "Heavyweight down jacket (0°F / -18°C rated for high camps)",
-          "Waterproof/breathable shell jacket and pants",
-          "Insulated camp pants",
-          "Sun shirt, buff, sun hat, warm beanie",
-          "Liner gloves + insulated shell mitts"
-        ]
-      },
-      {
         "category": "Sleep system",
         "items": [
-          "4-season sleeping bag (rated to ~0°F given ~4,600m camps)",
-          "Sleeping bag liner for extra warmth",
-          "Inflatable sleeping pad, R-value 5+"
+          "Western Mountaineering Alpinlite bag (0°F / −18°C)",
+          "Therm-a-Rest NeoAir XLite NXT (R-value 4.5+)",
+          "Bag liner"
         ]
       },
       {
-        "category": "Pack & carry",
+        "category": "Footwear & traction",
         "items": [
-          "30–35L daypack for trekking",
-          "Duffel bag for mule/porter transport",
-          "Dry bags / pack liner",
-          "Trekking poles"
+          "Sturdy backpacking boots",
+          "Kahtoola MICROspikes — Cuyoc Pass (5,000 m) and San Antonio (5,090 m)",
+          "Camp shoes"
         ]
       },
       {
         "category": "Altitude & health",
         "items": [
-          "Diamox (consult a doctor before departure)",
-          "Pulse oximeter",
-          "Personal first-aid kit + electrolyte tabs",
-          "High-SPF sunscreen and lip balm",
-          "Category 4 glacier sunglasses"
+          "Pulse oximeter (Wellue/Contec, ~$35) — check SpO₂ each morning",
+          "Diamox (acetazolamide) 125–250 mg twice daily — prescription, consult a doctor",
+          "Sunscreen SPF 50+"
+        ]
+      },
+      {
+        "category": "Water & cooking",
+        "items": [
+          "Sawyer Squeeze + Aquatabs backup — filters can freeze above 4,000 m at night",
+          "Stove and fuel"
         ]
       },
       {
         "category": "Navigation & safety",
         "items": [
-          "Offline maps (Gaia GPS / Maps.me) downloaded in advance",
-          "Headlamp + spare batteries",
-          "Satellite communicator (Garmin inReach) — Huayhuash is remote",
-          "Water filter + chemical backup treatment",
-          "Insulated water bottles to prevent freezing"
+          "Garmin inReach Mini 2 — zero evacuation infrastructure",
+          "Headlamp",
+          "Offline maps"
         ]
       }
     ],
     "trainingPlan": [
       {
-        "phase": "Base building",
-        "timeframe": "Jul–Sep 2026",
-        "focus": "Rebuild aerobic base and reintroduce structured strength work",
+        "phase": "Base rebuild",
+        "timeframe": "Sep–Dec 2030",
+        "focus": "Aerobic base after the gap year.",
         "details": [
-          "3x/week zone 2 cardio (bike or run)",
-          "2x/week full-body strength, shifting toward strength-endurance and posterior chain/leg work",
-          "1x/week weighted ruck, 3–5mi with a 15–20lb pack on flat terrain"
+          "Rebuild hiking volume",
+          "Strength foundation",
+          "Eccentric step-downs plus hip work (lateral band walks, Copenhagen plank)"
         ]
       },
       {
-        "phase": "Century ride block",
-        "timeframe": "Oct–Dec 2026",
-        "focus": "Peak cycling volume — target a fall century as an aerobic milestone",
+        "phase": "Altitude exposure",
+        "timeframe": "Jan–Mar 2031",
+        "focus": "Real high-altitude data.",
         "details": [
-          "Progressive long Saturday rides building to 100mi",
-          "Continue weekly rucking, pack weight up to 25–30lb",
-          "Add stairs or incline treadmill sessions for vertical gain"
+          "Colorado 14er trip (Mt. Elbert, Grays/Torreys) for altitude-response data",
+          "Loaded climbs on scree-like terrain"
         ]
       },
       {
-        "phase": "Trek-specific loading",
-        "timeframe": "Jan–Mar 2027",
-        "focus": "Heavy rucking and leg strength for sustained high-altitude days",
+        "phase": "Peak loading",
+        "timeframe": "Apr–May 2031",
+        "focus": "Long climbing days under load.",
         "details": [
-          "2x/week rucking, including one long ruck of 8–12mi with 30–35lb",
-          "Weighted step-ups, lunges, and single-leg strength work",
-          "Altitude simulation via stairmaster intervals; real elevation exposure if accessible",
-          "Maintain bike/run cardio base at reduced volume"
+          "6–9 hr loaded hikes",
+          "Back-to-back weekends",
+          "NOLS Wilderness First Responder certification"
         ]
       },
       {
-        "phase": "Peak & taper",
-        "timeframe": "Apr–Jun 2027",
-        "focus": "Simulate multi-day trekking and dial in gear before departure",
+        "phase": "Taper",
+        "timeframe": "Early Jun 2031",
+        "focus": "Arrive fresh, acclimatize on arrival.",
         "details": [
-          "Back-to-back long rucks on consecutive days to simulate the circuit",
-          "Full gear shakedown hikes with trek-weight pack",
-          "Taper volume in the final 2 weeks before departure"
+          "Cut volume",
+          "Build in Huaraz acclimatization days",
+          "Confirm the operator and the inReach"
         ]
+      }
+    ],
+    "fitnessBridge": [
+      "VO2 max from years of Ironman training → more oxygen extracted per breath at 5,000 m",
+      "Century-ride quad strength → directly relevant to 6–9 hr climbing days on scree",
+      "Gap to close → proven altitude response at 5,000 m+ (only testable by going to altitude)"
+    ],
+    "communities": [
+      {
+        "name": "Huayhuash Facebook Group"
+      },
+      {
+        "name": "Brooke Beyond blog",
+        "url": "https://brookebeyond.com",
+        "note": "Most comprehensive English-language Huayhuash guide"
+      },
+      {
+        "name": "Action Peru Treks",
+        "url": "https://actionperutreks.com",
+        "note": "Reputable local operator based in Huaraz"
+      },
+      {
+        "name": "G Adventures Huayhuash Circuit",
+        "note": "Solid guided option for a first time through"
       }
     ]
   },
   {
-    "slug": "new-england-loop-2027",
+    "slug": "new-england-loop-2028",
     "name": "New England Loop",
     "region": "na",
     "status": "planned",
-    "year": 2027,
+    "year": 2028,
     "months": "Oct",
     "intensity": 2,
-    "days": 12,
+    "days": 14,
     "countries": [
       "United States"
     ],
@@ -183,24 +185,26 @@
     ],
     "note": "Peak fall foliage road trip through Vermont, New Hampshire, and Maine. Covered ground on the NA road trip but worth its own slow loop.",
     "activities": [
-      "White Mountains",
-      "Acadia",
-      "Vermont back roads",
-      "Kancamagus Highway",
-      "Coastal Maine seafood"
+      "Portland, Maine",
+      "Acadia National Park",
+      "Burlington, Vermont",
+      "White Mountains, NH",
+      "Cape Cod",
+      "Newport, Rhode Island",
+      "Boston"
     ],
     "bestTime": "Early–mid October for peak foliage",
-    "heroPhoto": "travel/new-england-loop-2027/hero",
+    "heroPhoto": "travel/new-england-loop-2028/hero",
     "photoCount": 0,
     "featuredPhotos": [],
     "planningDoc": "https://docs.google.com/spreadsheets/d/1uwrzmrQI8te-6ts9wagURRjzZee79p_GuMMlg6--8qM/edit?usp=sharing"
   },
   {
-    "slug": "chile-wtrek-2028",
+    "slug": "chile-wtrek-2027",
     "name": "Chile + W-Trek (Patagonia)",
     "region": "south_am",
     "status": "planned",
-    "year": 2028,
+    "year": 2027,
     "months": "Dec–Jan",
     "intensity": 4,
     "days": 16,
@@ -211,7 +215,7 @@
       -50.94,
       -73.4
     ],
-    "note": "Torres del Paine's W-Trek in the Patagonian summer, plus the Atacama and Santiago.",
+    "note": "Torres del Paine's W-Trek in the Patagonian summer, plus the Atacama and Santiago. The entry point of the trek progression — hut-supported, and the first real test of loaded downhill legs.",
     "activities": [
       "W-Trek in Torres del Paine",
       "Base of the Towers sunrise",
@@ -220,7 +224,7 @@
       "Santiago wine country"
     ],
     "bestTime": "Dec–Feb for the Patagonian summer",
-    "heroPhoto": "travel/chile-wtrek-2028/hero",
+    "heroPhoto": "travel/chile-wtrek-2027/hero",
     "photoCount": 0,
     "featuredPhotos": [],
     "planningDoc": "https://docs.google.com/document/d/1USRhyCjxe57vGSsNb6-_aXqwbQ8kVDPiSdYuKFl4O5s/edit?usp=sharing",
@@ -228,104 +232,112 @@
       {
         "category": "Footwear",
         "items": [
-          "Waterproof hiking boots",
-          "Camp shoes",
-          "Wool hiking socks",
-          "Gaiters for mud and scree"
+          "Salomon Quest 4 GTX or Hoka Anacapa Mid GTX",
+          "Trail runners for refugio evenings",
+          "Liner + merino sock system"
         ]
       },
       {
-        "category": "Layers",
+        "category": "Pack & carry (7–9 kg target)",
         "items": [
-          "Wind-resistant hardshell jacket — Patagonian wind is relentless",
-          "Rain pants",
-          "Insulated puffy jacket",
-          "Merino base layers",
-          "Fleece mid-layer",
-          "Warm hat, sun hat, buff",
-          "Wind-resistant gloves"
+          "Osprey Talon 33 (28–35 L)",
+          "Black Diamond Alpine Carbon Cork poles — mandatory for Patagonian wind",
+          "Dry bags"
         ]
       },
       {
-        "category": "Sleep system",
+        "category": "Layers & shell",
         "items": [
-          "3-season sleeping bag + liner (lighter if refugio-only nights)",
-          "Sleeping pad for any camping nights"
+          "Arc'teryx Beta LT or Patagonia Torrentshell 3L — fully waterproof, not just DWR",
+          "Wind layer",
+          "Fleece midlayer"
         ]
       },
       {
-        "category": "Pack & carry",
+        "category": "Sun & skin",
         "items": [
-          "35–45L trekking pack",
-          "Pack rain cover",
-          "Trekking poles — wind gusts can knock you off balance"
+          "Sunscreen SPF 50+ — Southern Hemisphere ozone hole",
+          "Glacier-grade sunglasses",
+          "Lip balm with SPF"
         ]
       },
       {
-        "category": "Health & comfort",
+        "category": "Navigation & safety",
         "items": [
-          "Sunscreen and lip balm (strong UV + wind chapping)",
-          "Blister kit",
-          "Earplugs for busy refugios",
-          "Quick-dry towel"
-        ]
-      },
-      {
-        "category": "Logistics",
-        "items": [
-          "Refugio/campsite reservations booked far in advance — the W-Trek sells out",
-          "Offline maps",
-          "Headlamp"
+          "Garmin inReach Mini 2 — zero cell signal in the park",
+          "Headlamp",
+          "Offline maps"
         ]
       }
     ],
     "trainingPlan": [
       {
-        "phase": "Recovery & base rebuild",
-        "timeframe": "Jul–Aug 2027",
-        "focus": "Active recovery after Huayhuash before ramping back up",
+        "phase": "Base building",
+        "timeframe": "Jan–Mar 2027",
+        "focus": "Aerobic base and a strength foundation for descents.",
         "details": [
-          "Light cardio and mobility work, no heavy loading",
-          "Reassess what worked and what didn't from the Peru gear/training cycle"
+          "Build weekly hiking volume",
+          "Begin eccentric step-downs (3×15 per leg)",
+          "Add a 3-second lowering tempo to existing Bulgarian split squats"
         ]
       },
       {
-        "phase": "Half Ironman build",
-        "timeframe": "Sep 2027–Jun 2028",
-        "focus": "Periodized swim/bike/run block leveraging the century ride base, targeting an early-summer 2028 race",
+        "phase": "Loaded volume",
+        "timeframe": "Apr–Jun 2027",
+        "focus": "Load tolerance and consecutive-day capacity.",
         "details": [
-          "Dedicated swim technique work — likely the weakest discipline coming in",
-          "Structured bike and run progression building on existing cycling fitness",
-          "This block doubles as excellent aerobic conditioning for the W-Trek"
+          "One loaded hike per week (8–12 mi, 20–25 lb pack)",
+          "Lateral band walks for glute-medius stability",
+          "Monthly weekend double — Saturday + Sunday hikes back-to-back"
         ]
       },
       {
-        "phase": "Patagonia-specific prep",
-        "timeframe": "Jul–Nov 2028",
-        "focus": "Wind, cold, and terrain-specific conditioning",
+        "phase": "Descent focus",
+        "timeframe": "Jul–Sep 2027",
+        "focus": "Eccentric braking and a dialed blister protocol.",
         "details": [
-          "Weekly rucking with 25–30lb pack on varied terrain",
-          "Train in wind/rain where possible to condition for exposed ridgelines",
-          "Maintain strength work for stability on scree and river crossings"
+          "Treadmill or stair descent under a loaded pack",
+          "Lock in Leukotape P taping for hotspots",
+          "Test the full boot + sock system on long descents"
         ]
       },
       {
-        "phase": "Taper",
-        "timeframe": "Early Dec 2028",
-        "focus": "Final gear check and short shakedown hikes",
+        "phase": "Peak & taper",
+        "timeframe": "Oct–Dec 2027",
+        "focus": "Sharpen, then arrive rested.",
         "details": [
-          "Test full rain/wind kit together, not just individual pieces",
-          "Taper volume in the final 1–2 weeks before departure"
+          "Peak loaded hike (12+ mi)",
+          "Cut volume 2–3 weeks out",
+          "Refugio bookings and a full gear shakedown"
         ]
+      }
+    ],
+    "fitnessBridge": [
+      "Century ride → quad and glute strength plus aerobic output carry straight over",
+      "Ironman 70.3 → aerobic base and back-to-back effort tolerance already banked",
+      "Gap to close → loaded downhill descent (eccentric braking) and blister management"
+    ],
+    "communities": [
+      {
+        "name": "Torres del Paine Facebook Group"
+      },
+      {
+        "name": "r/Patagonia on Reddit",
+        "url": "https://reddit.com/r/Patagonia"
+      },
+      {
+        "name": "Las Torres Patagonia",
+        "url": "https://lastorres.com",
+        "note": "Refugio bookings — reserve 6+ months ahead"
       }
     ]
   },
   {
-    "slug": "three-passes-nepal-2029",
+    "slug": "three-passes-nepal-2032",
     "name": "Three Passes Trek, Nepal",
     "region": "trek",
     "status": "planned",
-    "year": 2029,
+    "year": 2032,
     "months": "Nov",
     "intensity": 5,
     "days": 21,
@@ -336,7 +348,7 @@
       27.9881,
       86.925
     ],
-    "note": "The Everest region's high route — Kongma La, Cho La, and Renjo La passes, all above 5,000m. Acclimatization is everything. Saved for after Peru and Chile to build high-altitude and multi-day trekking experience first.",
+    "note": "The Everest region's high route — Kongma La, Cho La, and Renjo La passes, all above 5,000 m. Acclimatization is everything. The culmination of the progression, saved for last — after the W-Trek, Traumpfad, Haute Route, and Huayhuash — to bank years of high-altitude and multi-day experience first.",
     "activities": [
       "Kongma La, Cho La, Renjo La passes",
       "Everest Base Camp",
@@ -345,119 +357,125 @@
       "Kala Patthar sunrise"
     ],
     "bestTime": "Late Oct–Nov for clear post-monsoon skies and stable weather",
-    "heroPhoto": "travel/three-passes-nepal-2029/hero",
+    "heroPhoto": "travel/three-passes-nepal-2032/hero",
     "photoCount": 0,
     "featuredPhotos": [],
     "planningDoc": "https://docs.google.com/document/d/1RX7dAS1KDl4IjKZ5Bg4hA6sIOsaSf2dh5t4ZrqsHUOU/edit?usp=sharing",
     "gearChecklist": [
       {
-        "category": "Footwear",
+        "category": "Sleep & warmth",
         "items": [
-          "Well broken-in insulated waterproof boots",
-          "Down booties or camp shoes for teahouses",
-          "Heavy wool socks + liner socks",
-          "Gaiters"
+          "Sea to Summit Reactor Extreme liner (+25°F, keeps the bag clean over 21 days)",
+          "Down pants (Cumulus or Rab 600-fill) for evenings above 4,500 m"
         ]
       },
       {
-        "category": "Layers",
+        "category": "Cold-weather extras",
         "items": [
-          "Expedition-weight down jacket (well below 0°F for 5,000m+ mornings)",
-          "Heavyweight base layers",
-          "Fleece or softshell mid-layer",
-          "Waterproof/breathable shell",
-          "Insulated pants",
-          "Down mittens + liner gloves",
-          "Warm beanie + buff",
-          "Category 4 glacier sunglasses — essential near Cho La and Renjo La snowfields"
+          "Expedition mittens/pogies — pre-dawn pass departures near −10°C",
+          "Balaclava for full face coverage"
         ]
       },
       {
-        "category": "Sleep system",
+        "category": "Technical hardware",
         "items": [
-          "4-season sleeping bag, rated to at least -20°F / -29°C (teahouses are unheated at altitude)",
-          "Sleeping bag liner",
-          "Inflatable sleeping pad (teahouse mattresses are thin)"
+          "Crampons for the Cho La glacier crossing",
+          "Ice axe — Black Diamond Raven 65 cm",
+          "Helmet — Black Diamond Half Dome (Kongma La scramble)"
         ]
       },
       {
-        "category": "Pack & carry",
+        "category": "Altitude & medical",
         "items": [
-          "40–50L trekking pack, or duffel + daypack if using a porter",
-          "Trekking poles — mandatory for the passes",
-          "Dry bags"
+          "Pulse oximeter",
+          "Diamox (acetazolamide)",
+          "Travel insurance with helicopter evacuation confirmed in writing (~$3,000–8,000)"
         ]
       },
       {
-        "category": "Altitude & health",
+        "category": "Base kit carried over",
         "items": [
-          "Diamox",
-          "Pulse oximeter — check O2 daily",
-          "Comprehensive high-altitude first-aid kit",
-          "Water purification (SteriPen or filter — treat all teahouse water)",
-          "Electrolytes",
-          "Travel insurance with high-altitude helicopter evacuation coverage"
-        ]
-      },
-      {
-        "category": "Navigation & logistics",
-        "items": [
-          "Offline maps for the Everest region (Gaia GPS / Maps.me)",
-          "Headlamp + spare batteries kept in an inner pocket (cold drains them fast)",
-          "Power bank — teahouse outlets are limited and often paid",
-          "Cash — no ATMs past Namche Bazaar",
-          "Satellite communicator",
-          "Snacks/energy bars — teahouse food gets monotonous and pricey at altitude"
+          "Huayhuash camping and altitude system",
+          "Garmin inReach Mini 2",
+          "Kahtoola MICROspikes"
         ]
       }
     ],
     "trainingPlan": [
       {
-        "phase": "Post-Chile base maintenance",
-        "timeframe": "Jan–Mar 2029",
-        "focus": "Hold aerobic and strength base gained from the Peru and Chile cycles",
+        "phase": "Base maintenance",
+        "timeframe": "Dec 2031–Mar 2032",
+        "focus": "Hold altitude fitness after Huayhuash.",
         "details": [
-          "Maintain 3x/week cardio and 2x/week strength through the off-season",
-          "Review lessons learned from Huayhuash and the W-Trek — this is the capstone trek"
+          "Aerobic volume",
+          "Maintain eccentric and hip strength",
+          "Refresher alpine-skills day if >3 yrs since Haute Route glacier travel"
         ]
       },
       {
         "phase": "Altitude-specific build",
-        "timeframe": "Apr–Jul 2029",
-        "focus": "Condition specifically for repeated passes above 5,000m",
+        "timeframe": "Apr–Jul 2032",
+        "focus": "Sustained high-altitude prep.",
         "details": [
-          "High-elevation hiking where accessible (e.g. Colorado/Rockies 14ers) to bank real altitude exposure",
-          "Heavier weekly rucking, building toward 35–40lb",
-          "Stairmaster or incline intervals for lung capacity at altitude"
+          "Altitude tent (hypoxic training) if accessible",
+          "Long loaded climbs",
+          "NOLS WFR if not already done — non-negotiable"
         ]
       },
       {
         "phase": "Peak volume",
-        "timeframe": "Aug–Oct 2029",
-        "focus": "Simulate the sustained multi-day, multi-pass demands of the route",
+        "timeframe": "Aug–Oct 2032",
+        "focus": "Multi-day carrying capacity.",
         "details": [
-          "Back-to-back multi-day rucks at max training pack weight",
-          "Cold-weather layering dress rehearsals",
-          "Final gear shakedown using the exact kit for the trip"
+          "Consecutive-day expeditions",
+          "Technical descent and scramble practice",
+          "Systems dialed for 21 days"
         ]
       },
       {
         "phase": "Taper",
-        "timeframe": "Early Nov 2029",
-        "focus": "Rest and final preparation before departure",
+        "timeframe": "Early Nov 2032",
+        "focus": "Peak, then acclimatize on the approach.",
         "details": [
-          "Sharp reduction in training volume in the final 10–14 days",
-          "Confirm insurance, permits, and evacuation coverage are in order"
+          "Reduce load",
+          "Plan Namche and Pheriche acclimatization",
+          "Confirm helicopter-evacuation insurance in writing"
         ]
+      }
+    ],
+    "fitnessBridge": [
+      "All prior treks plus years of Ironman/century — the strongest possible preparation",
+      "The VO2 max advantage compounds: more O₂ extracted per breath at 5,500 m",
+      "Gap to close → sustained altitude above 4,800 m for days; a glacier crossing on Cho La; a scramble on Kongma La"
+    ],
+    "communities": [
+      {
+        "name": "Himalayan Rescue Association (HRA)",
+        "note": "Clinics in Namche Bazaar and Pheriche — check in on the approach"
+      },
+      {
+        "name": "Himalaya Guide Nepal",
+        "url": "https://himalayaguidenepal.com",
+        "note": "Reputable local guided option"
+      },
+      {
+        "name": "American Alpine Club",
+        "url": "https://americanalpineclub.org",
+        "note": "Membership plus rescue coverage"
+      },
+      {
+        "name": "International Society for Mountain Medicine",
+        "url": "https://ismmed.org",
+        "note": "Printable altitude symptom cards"
       }
     ]
   },
   {
-    "slug": "traumpfad-2031",
+    "slug": "traumpfad-2028",
     "name": "Traumpfad: Munich → Venice",
     "region": "trek",
     "status": "planned",
-    "year": 2031,
+    "year": 2028,
     "months": "Aug–Sep",
     "intensity": 4,
     "days": 28,
@@ -470,7 +488,7 @@
       46.8,
       11.5
     ],
-    "note": "The 'Dream Path' — a ~550km trek across the Alps from Munich to Venice, ending on the Grand Canal.",
+    "note": "The 'Dream Path' — a ~550 km trek across the Alps from Munich to Venice, ending on the Grand Canal. Twenty-eight consecutive hut-to-hut days: the endurance step-up in the trek progression.",
     "activities": [
       "Bavarian Alps",
       "Dolomites crossing",
@@ -479,17 +497,119 @@
       "Traditional mountain villages"
     ],
     "bestTime": "Late Jul–Sep for open high passes and hut season",
-    "heroPhoto": "travel/traumpfad-2031/hero",
+    "heroPhoto": "travel/traumpfad-2028/hero",
     "photoCount": 0,
     "featuredPhotos": [],
-    "planningDoc": "https://docs.google.com/document/d/1MpstTKws7n81dP0io9rdRAZjLy5xB1-cTDh0XCS0hbI/edit?usp=sharing"
+    "planningDoc": "https://docs.google.com/document/d/1MpstTKws7n81dP0io9rdRAZjLy5xB1-cTDh0XCS0hbI/edit?usp=sharing",
+    "gearChecklist": [
+      {
+        "category": "Footwear",
+        "items": [
+          "La Sportiva Ultra Raptor II Mid GTX or Salomon Quest 4 GTX",
+          "Alternate two boot pairs across the 28 days",
+          "Camp sandals"
+        ]
+      },
+      {
+        "category": "Pack & carry (10–13 kg)",
+        "items": [
+          "Osprey Atmos AG 65 or Deuter Aircontact Lite 45+10",
+          "Trekking poles",
+          "Dry bags"
+        ]
+      },
+      {
+        "category": "Alpine sections",
+        "items": [
+          "Via ferrata set + helmet — optional Dolomite sections",
+          "Microspikes for early/late-season snow on high passes"
+        ]
+      },
+      {
+        "category": "Layers & sleep",
+        "items": [
+          "Waterproof hardshell",
+          "Insulated midlayer",
+          "Hut sleeping-bag liner (Hüttenschlafsack, required in DAV huts)"
+        ]
+      },
+      {
+        "category": "Navigation & docs",
+        "items": [
+          "Cicerone Traumpfad guidebook (John Hayes)",
+          "DAV membership (~€75/yr) → 50% off DAV huts",
+          "Offline maps"
+        ]
+      }
+    ],
+    "trainingPlan": [
+      {
+        "phase": "Recovery & rebuild",
+        "timeframe": "Jan–Mar 2028",
+        "focus": "Reset after the W-Trek, rebuild base.",
+        "details": [
+          "Easy aerobic volume",
+          "Reintroduce loaded hikes",
+          "Maintain eccentric step-down work"
+        ]
+      },
+      {
+        "phase": "Consecutive-day conditioning",
+        "timeframe": "Apr–Jun 2028",
+        "focus": "Back-to-back-to-back load.",
+        "details": [
+          "3-day hiking trips (Presidential Traverse NH, Shenandoah)",
+          "Foot-care protocol with Leukotape P",
+          "Rotate two boot pairs to manage foot fatigue"
+        ]
+      },
+      {
+        "phase": "Endurance & climbing volume",
+        "timeframe": "Jul 2028",
+        "focus": "Daily-gain tolerance.",
+        "details": [
+          "Stair climber with a pack 2×/week",
+          "Long climbs of ~1,000 m gain",
+          "Ironman brick sessions for consecutive-effort tolerance"
+        ]
+      },
+      {
+        "phase": "Taper",
+        "timeframe": "Early Aug 2028",
+        "focus": "Freshen up for 28 days on trail.",
+        "details": [
+          "Cut volume",
+          "Final gear and boot-rotation shakedown",
+          "Confirm DAV membership and the hut plan"
+        ]
+      }
+    ],
+    "fitnessBridge": [
+      "Ironman brick workouts → the closest training analog to consecutive hiking days",
+      "Century-ride aerobic base → handles roughly 1,000 m of daily climbing",
+      "Gap to close → 28 straight days; only extended hiking trips truly replicate this"
+    ],
+    "communities": [
+      {
+        "name": "Traumpfad / Munich to Venice Facebook Group"
+      },
+      {
+        "name": "German Alpine Club (DAV)",
+        "url": "https://alpenverein.de",
+        "note": "Membership is essential — hut discounts and reservations"
+      },
+      {
+        "name": "John Hayes Walks blog",
+        "url": "https://johnhayeswalks.com"
+      }
+    ]
   },
   {
-    "slug": "switzerland-haute-route-2032",
+    "slug": "switzerland-haute-route-2029",
     "name": "Switzerland + Haute Route",
     "region": "trek",
     "status": "planned",
-    "year": 2032,
+    "year": 2029,
     "months": "Sep",
     "intensity": 5,
     "days": 14,
@@ -501,7 +621,7 @@
       46,
       7.75
     ],
-    "note": "The classic Chamonix-to-Zermatt Haute Route — Mont Blanc to the Matterhorn, hut to hut.",
+    "note": "The classic Chamonix-to-Zermatt Haute Route — Mont Blanc to the Matterhorn, hut to hut. The technical step-up: glacier crossings, crampons, and exposed passes above 3,000 m.",
     "activities": [
       "Chamonix to Zermatt trek",
       "Matterhorn views",
@@ -510,10 +630,113 @@
       "Swiss rail scenic routes"
     ],
     "bestTime": "Sep for stable weather and quieter trails",
-    "heroPhoto": "travel/switzerland-haute-route-2032/hero",
+    "heroPhoto": "travel/switzerland-haute-route-2029/hero",
     "photoCount": 0,
     "featuredPhotos": [],
-    "planningDoc": "https://docs.google.com/document/d/1L6T6_GP7ulNHg-Vh_yqKloJoDslchUPRD8Jjvi6Ddxk/edit?usp=sharing"
+    "planningDoc": "https://docs.google.com/document/d/1L6T6_GP7ulNHg-Vh_yqKloJoDslchUPRD8Jjvi6Ddxk/edit?usp=sharing",
+    "gearChecklist": [
+      {
+        "category": "Technical footwear",
+        "items": [
+          "La Sportiva Trango Tech Leather GTX or Scarpa Zodiac Plus GTX — crampon-compatible"
+        ]
+      },
+      {
+        "category": "Glacier hardware",
+        "items": [
+          "Crampons — Black Diamond Contact Strap or Petzl Irvis (10-point minimum)",
+          "Ice axe — Black Diamond Raven 60–65 cm"
+        ]
+      },
+      {
+        "category": "Eyes & emergency",
+        "items": [
+          "Glacier glasses — Julbo Sherpa Cat 4 + side shields (snow-blindness risk)",
+          "Emergency bivy — SOL Escape (3 oz)"
+        ]
+      },
+      {
+        "category": "Base kit carried over",
+        "items": [
+          "Traumpfad hut-to-hut pack and poles",
+          "Waterproof hardshell",
+          "Hut sleeping-bag liner"
+        ]
+      },
+      {
+        "category": "Navigation & safety",
+        "items": [
+          "SAC hut bookings",
+          "Offline maps",
+          "Garmin inReach Mini 2"
+        ]
+      }
+    ],
+    "trainingPlan": [
+      {
+        "phase": "Base maintenance",
+        "timeframe": "Nov 2028–Feb 2029",
+        "focus": "Hold fitness through the winter.",
+        "details": [
+          "Aerobic cross-training",
+          "Maintain eccentric step-downs 3×/week — patellar-tendon protection for technical descents"
+        ]
+      },
+      {
+        "phase": "Technical skills",
+        "timeframe": "Mar–May 2029",
+        "focus": "Crampon and ice-axe competence.",
+        "details": [
+          "Washington Alpine Club mountaineering-basics course",
+          "One guided glacier day (Tuckerman Ravine NH in spring)",
+          "Self-arrest practice"
+        ]
+      },
+      {
+        "phase": "Alpine-specific build",
+        "timeframe": "Jun–Aug 2029",
+        "focus": "Exposure and descent volume.",
+        "details": [
+          "Presidential Traverse (NH) — the best single-day Haute Route simulator in the Eastern US",
+          "Long technical descents",
+          "Loaded hikes on rock"
+        ]
+      },
+      {
+        "phase": "Taper",
+        "timeframe": "Early Sep 2029",
+        "focus": "Peak sharpness.",
+        "details": [
+          "Reduce volume",
+          "Confirm guided sections and the hut chain",
+          "Crampon and boot-fit check"
+        ]
+      }
+    ],
+    "fitnessBridge": [
+      "Years of Ironman, century riding, plus the W-Trek and Traumpfad — base fully established",
+      "Aerobic and descent conditioning from prior treks carries over directly",
+      "Gap to close → technical terrain: glacier crossings, crampons, exposed passes above 3,000 m"
+    ],
+    "communities": [
+      {
+        "name": "Washington Alpine Club",
+        "note": "Priority for crampon and ice-axe skills"
+      },
+      {
+        "name": "Hut-to-Hut Switzerland Facebook Group"
+      },
+      {
+        "name": "Compagnie des Guides de Chamonix",
+        "url": "https://chamonix-guides.com",
+        "note": "Guided options for the technical sections"
+      },
+      {
+        "name": "Swiss Alpine Club (SAC)",
+        "url": "https://cas.ch",
+        "note": "Reciprocal hut rates with DAV membership"
+      }
+    ]
   },
   {
     "slug": "argentina-2032",
@@ -976,13 +1199,13 @@
   },
   {
     "slug": "southwest-loop-2043",
-    "name": "Southwest / 4 Corners Loop",
+    "name": "Southwest / 4 Corners Desert Loop",
     "region": "na",
     "status": "planned",
     "year": 2043,
     "months": "Oct",
     "intensity": 3,
-    "days": 14,
+    "days": 18,
     "countries": [
       "United States"
     ],
@@ -990,15 +1213,20 @@
       36.5,
       -111.5
     ],
-    "note": "A slower return to the red-rock country — Zion, Bryce, Arches, and the Grand Canyon.",
+    "note": "A slower return to the red-rock country — Zion, Bryce, Arches, and the Grand Canyon. Permit-heavy: Angels Landing, Havasu Falls, and The Wave all need advance lottery entry.",
     "activities": [
-      "Zion",
+      "Zion National Park",
       "Bryce Canyon",
-      "Arches",
+      "Arches National Park",
+      "Canyonlands",
+      "Monument Valley",
       "Grand Canyon",
-      "Antelope Canyon"
+      "Antelope Canyon",
+      "Sedona",
+      "Joshua Tree",
+      "Death Valley"
     ],
-    "bestTime": "Oct for cool desert days",
+    "bestTime": "Apr–May or Oct–Nov — avoid the 115°F+ summer",
     "heroPhoto": "travel/southwest-loop-2043/hero",
     "photoCount": 0,
     "featuredPhotos": [],
@@ -1012,7 +1240,7 @@
     "year": 2044,
     "months": "Aug",
     "intensity": 3,
-    "days": 12,
+    "days": 16,
     "countries": [
       "United States"
     ],
@@ -1026,7 +1254,10 @@
       "Mount Rainier",
       "North Cascades",
       "Seattle",
-      "Oregon coast"
+      "Portland, Oregon",
+      "Crater Lake",
+      "Cannon Beach",
+      "Vancouver BC"
     ],
     "bestTime": "Jul–Sep for the reliable dry window",
     "heroPhoto": "travel/pacific-northwest-loop-2044/hero",
@@ -1133,7 +1364,7 @@
     "year": 2047,
     "months": "Jul",
     "intensity": 3,
-    "days": 13,
+    "days": 16,
     "countries": [
       "United States"
     ],
@@ -1141,15 +1372,16 @@
       45.6,
       -110.5
     ],
-    "note": "Glacier, Yellowstone, and the Tetons — the crown of the American Rockies.",
+    "note": "Glacier, Yellowstone, and the Tetons — the crown of the American Rockies. Going-to-the-Sun Road is fully open Jul–Sep; a vehicle reservation is required in peak season.",
     "activities": [
-      "Glacier National Park",
-      "Going-to-the-Sun Road",
-      "Yellowstone",
-      "Grand Teton",
-      "Wildlife watching"
+      "Glacier National Park (Going-to-the-Sun Road)",
+      "Yellowstone National Park",
+      "Grand Teton National Park",
+      "Beartooth Highway",
+      "Badlands",
+      "Mount Rushmore"
     ],
-    "bestTime": "Jul–Aug when high passes are open",
+    "bestTime": "Jul–Aug when the high passes are open",
     "heroPhoto": "travel/northern-rockies-loop-2047/hero",
     "photoCount": 0,
     "featuredPhotos": [],
@@ -1163,7 +1395,7 @@
     "year": 2047,
     "months": "Sep",
     "intensity": 2,
-    "days": 11,
+    "days": 14,
     "countries": [
       "United States"
     ],
@@ -1171,15 +1403,18 @@
       36.3,
       -121.8
     ],
-    "note": "PCH from Big Sur to the redwoods, with a Yosemite detour.",
+    "note": "PCH from Big Sur to the redwoods, with a Yosemite detour. Spring and fall bring the clearest coast — summer fog blankets Highway 1, and Yosemite timed-entry permits book months ahead.",
     "activities": [
+      "San Francisco",
       "Big Sur",
-      "Yosemite",
-      "Redwoods",
-      "Pacific Coast Highway",
-      "San Francisco"
+      "Highway 1",
+      "Santa Barbara",
+      "Los Angeles",
+      "Yosemite National Park",
+      "Lake Tahoe",
+      "Napa Valley"
     ],
-    "bestTime": "Sep–Oct for clear coastal skies",
+    "bestTime": "Apr–May or Sep–Oct for the clearest coast",
     "heroPhoto": "travel/california-coast-loop-2047/hero",
     "photoCount": 0,
     "featuredPhotos": [],
@@ -1203,13 +1438,14 @@
     ],
     "note": "Music, food, and history through New Orleans, Nashville, and Savannah.",
     "activities": [
-      "New Orleans",
       "Nashville",
+      "New Orleans",
       "Savannah",
-      "Memphis BBQ",
-      "Gulf Coast"
+      "Charleston",
+      "Shenandoah National Park",
+      "Blue Ridge Parkway"
     ],
-    "bestTime": "Mar–Apr before summer humidity",
+    "bestTime": "Mar–Apr or Oct–Nov, before summer humidity",
     "heroPhoto": "travel/deep-south-loop-2048/hero",
     "photoCount": 0,
     "featuredPhotos": [],

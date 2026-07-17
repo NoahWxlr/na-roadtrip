@@ -7,6 +7,7 @@ import { REGION_LABELS } from '@/lib/regions'
 import { getCloudinaryUrl } from '@/lib/cloudinary'
 import { Stars, RegionPill, StatusBadge } from '@/components/ui'
 import GoogleMapEmbed from '@/components/map/GoogleMapEmbed'
+import TrekTrainingProtocol from '@/components/TrekTrainingProtocol'
 
 // The NA road trip has its own dedicated route; exclude it here.
 export function generateStaticParams() {
@@ -90,6 +91,17 @@ export default function TripPage({ params }: { params: { slug: string } }) {
             <p className="mt-3 text-[var(--text-secondary)]">{trip.bestTime}</p>
           </section>
 
+          {trip.fitnessBridge && trip.fitnessBridge.length > 0 && (
+            <section className="mt-8">
+              <h2 className="font-display text-2xl font-semibold">Fitness bridge</h2>
+              <ul className="mt-3 list-disc space-y-1 pl-5 text-[var(--text-secondary)]">
+                {trip.fitnessBridge.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+            </section>
+          )}
+
           {trip.trainingPlan && trip.trainingPlan.length > 0 && (
             <section className="mt-8">
               <h2 className="font-display text-2xl font-semibold">Training plan</h2>
@@ -121,6 +133,10 @@ export default function TripPage({ params }: { params: { slug: string } }) {
             </section>
           )}
 
+          {trip.trainingPlan && trip.trainingPlan.length > 0 && (
+            <TrekTrainingProtocol />
+          )}
+
           {trip.gearChecklist && trip.gearChecklist.length > 0 && (
             <section className="mt-8">
               <h2 className="font-display text-2xl font-semibold">Gear checklist</h2>
@@ -141,6 +157,31 @@ export default function TripPage({ params }: { params: { slug: string } }) {
                   </div>
                 ))}
               </div>
+            </section>
+          )}
+
+          {trip.communities && trip.communities.length > 0 && (
+            <section className="mt-8">
+              <h2 className="font-display text-2xl font-semibold">Communities & resources</h2>
+              <ul className="mt-3 space-y-2 text-[var(--text-secondary)]">
+                {trip.communities.map((c) => (
+                  <li key={c.name}>
+                    {c.url ? (
+                      <a
+                        href={c.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-[var(--accent)] hover:underline"
+                      >
+                        {c.name}
+                      </a>
+                    ) : (
+                      <span className="font-medium text-[var(--text-primary)]">{c.name}</span>
+                    )}
+                    {c.note ? ` — ${c.note}` : ''}
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
 

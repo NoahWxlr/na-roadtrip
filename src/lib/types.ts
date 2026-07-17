@@ -22,6 +22,12 @@ export interface TrainingPhase {
   details: string[]
 }
 
+export interface Community {
+  name: string
+  url?: string
+  note?: string
+}
+
 export interface Trip {
   slug: string
   name: string
@@ -47,6 +53,10 @@ export interface Trip {
   gearChecklist?: GearCategory[]
   /** Periodized training build-up shown on multi-day trek pages. */
   trainingPlan?: TrainingPhase[]
+  /** How current endurance training bridges to this trek, shown above the training plan. */
+  fitnessBridge?: string[]
+  /** Facebook groups, subreddits, guided operators, and alpine clubs for this trek. */
+  communities?: Community[]
 }
 
 export interface PlanYear {
